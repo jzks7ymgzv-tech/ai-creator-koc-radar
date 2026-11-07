@@ -31,7 +31,7 @@ jobs:
         env:
           X_BEARER_TOKEN: ${{ secrets.X_BEARER_TOKEN }}
         run: |
-          python3 ai_creator_lead_finder/creator_lead_finder.py \
+          python3 creator_lead_finder.py \
             --once \
             --platforms "x,reddit,github,youtube,instagram" \
             --limit 100 \
@@ -44,8 +44,8 @@ jobs:
           import json
           from pathlib import Path
 
-          results_path = Path("ai_creator_lead_finder/data/leads.json")
-          runs_path = Path("ai_creator_lead_finder/data/runs.jsonl")
+          results_path = Path("data/leads.json")
+          runs_path = Path("data/runs.jsonl")
           rows = json.loads(results_path.read_text(encoding="utf-8")) if results_path.exists() else []
           run_row = {}
           if runs_path.exists():
@@ -70,9 +70,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add ai_creator_lead_finder/data/leads.json \
-            ai_creator_lead_finder/data/leads.csv \
-            ai_creator_lead_finder/data/runs.jsonl
+          git add data/leads.json data/leads.csv data/runs.jsonl
           if git diff --cached --quiet; then
             echo "没有新的名单变化。"
           else
@@ -86,7 +84,7 @@ jobs:
         with:
           name: ai-creator-daily-data
           path: |
-            ai_creator_lead_finder/data/leads.json
-            ai_creator_lead_finder/data/leads.csv
-            ai_creator_lead_finder/data/runs.jsonl
+            data/leads.json
+            data/leads.csv
+            data/runs.jsonl
           retention-days: 30
