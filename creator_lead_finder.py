@@ -170,12 +170,8 @@ ORGANIZATION_TERMS = [
     "inc",
     "llc",
     "ltd",
-    "media",
     "magazine",
-    "network",
     "community",
-    "software",
-    "games",
     "团队",
     "官方",
     "公司",
@@ -187,6 +183,40 @@ ORGANIZATION_TERMS = [
 
 ORGANIZATION_TOKEN_RE = re.compile(
     r"(?<![a-z0-9])(?:" + "|".join(re.escape(term) for term in ORGANIZATION_TERMS if term.isascii()) + r")(?![a-z0-9])",
+    re.I,
+)
+
+BRAND_ACCOUNT_HANDLES = {
+    "openai",
+    "blender",
+    "blenderartists",
+    "blenderstudio_",
+    "blenderdev",
+    "blendertoday",
+    "blendernation",
+    "tripoai",
+    "meshyai",
+    "meshy",
+    "steam",
+    "roblox",
+    "robloxcreators",
+    "robloxdevrel",
+    "godotengine",
+    "claudeai",
+    "elevenlabs",
+    "googleai",
+    "aiatmeta",
+    "opusclip",
+    "combosfun_ai",
+    "smartpigai",
+}
+
+CREATOR_IDENTITY_RE = re.compile(
+    r"\b(?:creator|artist|designer|3d|blender|aigc|ai|game\s*dev|indie|developer|dev|"
+    r"modeler|modeling|animat(?:or|ion)|vfx|visual|filmmak(?:er|ing)|vtuber|roblox|"
+    r"unreal|unity|godot|comfyui|generative|digital creator|coding|programmer|render|"
+    r"mesh|glb|freelance|illustrator|photographer|streamer|youtuber)\b|"
+    r"创作者|艺术家|建模|开发者|独立游戏|生成艺术",
     re.I,
 )
 
@@ -515,11 +545,27 @@ def likely_individual_creator(name: str, bio: str, platform: str, account_type: 
     if organization_signal(text):
         return False
     lowered = text.lower()
-    handle = clean_text(name).lower().replace("@", "")
+    handle = clean_text(name).lower().replace("@", "").split()[0]
+    if platform.lower() == "x" and handle in BRAND_ACCOUNT_HANDLES:
+        return False
     if any(token in handle for token in ("official", "_inc", "-inc", "_llc", "-llc", "_studio", "-studio", "_labs", "-labs")):
         return False
     if platform == "github" and account_type == "Organization":
         return False
+    return True
+
+
+def publishable_lead(lead: Lead) -> bool:
+    """Keep only public rows that match the requested individual-creator scope."""
+    platform = lead.platform.lower()
+    if not likely_individual_creator(lead.name, lead.bio, platform):
+        return False
+    if platform == "x":
+        if lead.followers is None or lead.followers < LEAD_RULES["minimum_followers"]:
+            return False
+        identity_text = clean_text(f"{lead.name} {lead.bio}")
+        if not CREATOR_IDENTITY_RE.search(identity_text):
+            return False
     return True
 
 
@@ -786,6 +832,7 @@ def merge_lead(existing: Lead, incoming: Lead) -> Lead:
 
 def search_x_api(keywords: list[str], limit: int) -> tuple[list[Lead], list[str]]:
     grouped: dict[str, Lead] = {}
+    seen_tweets: dict[str, set[str]] = {}
     errors: list[str] = []
     for keyword in keywords:
         query = f'"{keyword}" -is:retweet -is:reply'
@@ -812,6 +859,12 @@ def search_x_api(keywords: list[str], limit: int) -> tuple[list[Lead], list[str]
             if not likely_individual_creator(str(user.get("name") or username), str(user.get("description") or ""), "x"):
                 continue
             profile_url = f"https://x.com/{username}"
+            key = profile_url.lower()
+            tweet_id = str(tweet.get("id") or "")
+            if tweet_id and tweet_id in seen_tweets.setdefault(key, set()):
+                continue
+            if tweet_id:
+                seen_tweets[key].add(tweet_id)
             metrics = tweet.get("public_metrics") or {}
             view_count = parse_metric(metrics.get("impression_count") or metrics.get("view_count"))
             tweet_url = f"https://x.com/{username}/status/{tweet.get('id')}"
@@ -837,7 +890,6 @@ def search_x_api(keywords: list[str], limit: int) -> tuple[list[Lead], list[str]
             lead.data_quality = "X 官方 API"
             lead.activity_feedback = f"已发现相关公开帖子；当前关键词：{keyword}"
             lead.verification_status = "待继续累计内容"
-            key = profile_url.lower()
             if key in grouped:
                 grouped[key] = merge_lead(grouped[key], lead)
                 grouped[key].related_posts = (grouped[key].related_posts or 0) + 1
@@ -847,7 +899,7 @@ def search_x_api(keywords: list[str], limit: int) -> tuple[list[Lead], list[str]
                 grouped[key] = lead
         time.sleep(0.2)
     ordered = sorted(grouped.values(), key=lambda item: (-item.score, -item.activity_score, item.handle.lower()))
-    return ordered[:limit], errors
+    return [lead for lead in ordered if publishable_lead(lead)][:limit], errors
 
 
 def search_github(keywords: list[str], limit: int) -> tuple[list[Lead], list[str]]:
@@ -1041,7 +1093,7 @@ def collect_leads(keywords: list[str], platforms: list[str], limit: int = 50, en
             lead.data_quality = "公开页面摘要" if inspected else lead.data_quality
             if index < len(ordered) - 1:
                 time.sleep(0.2)
-    return ordered, errors
+    return [lead for lead in ordered if publishable_lead(lead)][:limit], errors
 
 
 def write_results(leads: list[Lead], preserve_existing: bool = True) -> None:
@@ -1064,7 +1116,7 @@ def write_results(leads: list[Lead], preserve_existing: bool = True) -> None:
     for lead in leads:
         key = lead.profile_url.rstrip("/").lower()
         merged[key] = merge_lead(merged[key], lead) if key in merged else lead
-    final_leads = sorted(merged.values(), key=lambda item: (-item.score, -item.activity_score, item.platform, item.handle.lower()))
+    final_leads = sorted((lead for lead in merged.values() if publishable_lead(lead)), key=lambda item: (-item.score, -item.activity_score, item.platform, item.handle.lower()))
     payload = [asdict(lead) for lead in final_leads]
     RESULTS_FILE.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
     fields = list(Lead.__dataclass_fields__.keys())
@@ -1576,7 +1628,7 @@ def read_run_logs() -> list[dict]:
 def run_collection(keywords: list[str], platforms: list[str], limit: int, replace_existing: bool = False) -> tuple[list[Lead], list[str]]:
     before_profiles = set() if replace_existing else {str(row.get("profile_url", "")).rstrip("/").lower() for row in read_results()}
     leads, errors = collect_leads(keywords, platforms, limit=limit, enrich=True)
-    if leads:
+    if leads or not replace_existing:
         write_results(leads, preserve_existing=not replace_existing)
     after_rows = read_results()
     new_count = sum(
