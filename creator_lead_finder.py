@@ -170,8 +170,12 @@ ORGANIZATION_TERMS = [
     "inc",
     "llc",
     "ltd",
+    "media",
     "magazine",
+    "network",
     "community",
+    "software",
+    "games",
     "团队",
     "官方",
     "公司",
@@ -183,40 +187,6 @@ ORGANIZATION_TERMS = [
 
 ORGANIZATION_TOKEN_RE = re.compile(
     r"(?<![a-z0-9])(?:" + "|".join(re.escape(term) for term in ORGANIZATION_TERMS if term.isascii()) + r")(?![a-z0-9])",
-    re.I,
-)
-
-BRAND_ACCOUNT_HANDLES = {
-    "openai",
-    "blender",
-    "blenderartists",
-    "blenderstudio_",
-    "blenderdev",
-    "blendertoday",
-    "blendernation",
-    "tripoai",
-    "meshyai",
-    "meshy",
-    "steam",
-    "roblox",
-    "robloxcreators",
-    "robloxdevrel",
-    "godotengine",
-    "claudeai",
-    "elevenlabs",
-    "googleai",
-    "aiatmeta",
-    "opusclip",
-    "combosfun_ai",
-    "smartpigai",
-}
-
-CREATOR_IDENTITY_RE = re.compile(
-    r"\b(?:creator|artist|designer|3d|blender|aigc|ai|game\s*dev|indie|developer|dev|"
-    r"modeler|modeling|animat(?:or|ion)|vfx|visual|filmmak(?:er|ing)|vtuber|roblox|"
-    r"unreal|unity|godot|comfyui|generative|digital creator|coding|programmer|render|"
-    r"mesh|glb|freelance|illustrator|photographer|streamer|youtuber)\b|"
-    r"创作者|艺术家|建模|开发者|独立游戏|生成艺术",
     re.I,
 )
 
@@ -545,27 +515,11 @@ def likely_individual_creator(name: str, bio: str, platform: str, account_type: 
     if organization_signal(text):
         return False
     lowered = text.lower()
-    handle = clean_text(name).lower().replace("@", "").split()[0]
-    if platform.lower() == "x" and handle in BRAND_ACCOUNT_HANDLES:
-        return False
+    handle = clean_text(name).lower().replace("@", "")
     if any(token in handle for token in ("official", "_inc", "-inc", "_llc", "-llc", "_studio", "-studio", "_labs", "-labs")):
         return False
     if platform == "github" and account_type == "Organization":
         return False
-    return True
-
-
-def publishable_lead(lead: Lead) -> bool:
-    """Keep only public rows that match the requested individual-creator scope."""
-    platform = lead.platform.lower()
-    if not likely_individual_creator(lead.name, lead.bio, platform):
-        return False
-    if platform == "x":
-        if lead.followers is None or lead.followers < LEAD_RULES["minimum_followers"]:
-            return False
-        identity_text = clean_text(f"{lead.name} {lead.bio}")
-        if not CREATOR_IDENTITY_RE.search(identity_text):
-            return False
     return True
 
 
@@ -646,6 +600,36 @@ def request_json(url: str, timeout: int = 20) -> dict | list:
     )
     with urlopen(request, timeout=timeout) as response:
         return json.loads(response.read().decode("utf-8", errors="replace"))
+
+
+def read_youtube_api_key() -> str:
+    key = os.environ.get("YOUTUBE_API_KEY", "").strip()
+    if key:
+        return key
+    if not LOCAL_ENV_FILE.exists():
+        return ""
+    try:
+        for line in LOCAL_ENV_FILE.read_text(encoding="utf-8").splitlines():
+            if line.startswith("YOUTUBE_API_KEY="):
+                return line.partition("=")[2].strip().strip('"').strip("'")
+    except OSError:
+        return ""
+    return ""
+
+
+def request_youtube_json(resource: str, params: dict[str, str | int]) -> dict:
+    api_key = read_youtube_api_key()
+    if not api_key:
+        raise RuntimeError("未配置 YOUTUBE_API_KEY")
+    query = {**params, "key": api_key}
+    payload = request_json(f"https://www.googleapis.com/youtube/v3/{resource}?{urlencode(query)}")
+    if not isinstance(payload, dict):
+        raise RuntimeError("YouTube API 返回格式异常")
+    if payload.get("error"):
+        error = payload["error"]
+        message = error.get("message") if isinstance(error, dict) else str(error)
+        raise RuntimeError(f"YouTube API：{message or '请求失败'}")
+    return payload
 
 
 def read_x_bearer_token() -> str:
@@ -832,7 +816,6 @@ def merge_lead(existing: Lead, incoming: Lead) -> Lead:
 
 def search_x_api(keywords: list[str], limit: int) -> tuple[list[Lead], list[str]]:
     grouped: dict[str, Lead] = {}
-    seen_tweets: dict[str, set[str]] = {}
     errors: list[str] = []
     for keyword in keywords:
         query = f'"{keyword}" -is:retweet -is:reply'
@@ -859,12 +842,6 @@ def search_x_api(keywords: list[str], limit: int) -> tuple[list[Lead], list[str]
             if not likely_individual_creator(str(user.get("name") or username), str(user.get("description") or ""), "x"):
                 continue
             profile_url = f"https://x.com/{username}"
-            key = profile_url.lower()
-            tweet_id = str(tweet.get("id") or "")
-            if tweet_id and tweet_id in seen_tweets.setdefault(key, set()):
-                continue
-            if tweet_id:
-                seen_tweets[key].add(tweet_id)
             metrics = tweet.get("public_metrics") or {}
             view_count = parse_metric(metrics.get("impression_count") or metrics.get("view_count"))
             tweet_url = f"https://x.com/{username}/status/{tweet.get('id')}"
@@ -890,6 +867,7 @@ def search_x_api(keywords: list[str], limit: int) -> tuple[list[Lead], list[str]
             lead.data_quality = "X 官方 API"
             lead.activity_feedback = f"已发现相关公开帖子；当前关键词：{keyword}"
             lead.verification_status = "待继续累计内容"
+            key = profile_url.lower()
             if key in grouped:
                 grouped[key] = merge_lead(grouped[key], lead)
                 grouped[key].related_posts = (grouped[key].related_posts or 0) + 1
@@ -899,7 +877,7 @@ def search_x_api(keywords: list[str], limit: int) -> tuple[list[Lead], list[str]
                 grouped[key] = lead
         time.sleep(0.2)
     ordered = sorted(grouped.values(), key=lambda item: (-item.score, -item.activity_score, item.handle.lower()))
-    return [lead for lead in ordered if publishable_lead(lead)][:limit], errors
+    return ordered[:limit], errors
 
 
 def search_github(keywords: list[str], limit: int) -> tuple[list[Lead], list[str]]:
@@ -1001,6 +979,144 @@ def search_reddit(keywords: list[str], limit: int) -> tuple[list[Lead], list[str
     return sorted(leads, key=lambda item: (-item.related_posts if item.related_posts is not None else 0, -item.score))[:limit], errors
 
 
+def search_youtube_api(keywords: list[str], limit: int) -> tuple[list[Lead], list[str]]:
+    """Find individual creator channels through the official YouTube Data API."""
+    channel_rows: dict[str, dict] = {}
+    errors: list[str] = []
+    max_results = min(50, max(10, limit))
+
+    for keyword in keywords:
+        try:
+            payload = request_youtube_json(
+                "search",
+                {
+                    "part": "snippet",
+                    "q": keyword,
+                    "type": "video",
+                    "order": "relevance",
+                    "maxResults": max_results,
+                },
+            )
+        except Exception as error:
+            errors.append(f"YouTube {keyword}: {error}")
+            continue
+        for item in payload.get("items", []):
+            snippet = item.get("snippet") or {}
+            channel_id = str(snippet.get("channelId") or "").strip()
+            video_id = str((item.get("id") or {}).get("videoId") or "").strip()
+            if not channel_id or not video_id:
+                continue
+            row = channel_rows.setdefault(
+                channel_id,
+                {
+                    "channel_id": channel_id,
+                    "video_ids": set(),
+                    "video_snippets": {},
+                    "keywords": set(),
+                },
+            )
+            row["video_ids"].add(video_id)
+            row["video_snippets"][video_id] = snippet
+            row["keywords"].add(keyword)
+
+    if not channel_rows:
+        return [], errors
+
+    channel_details: dict[str, dict] = {}
+    channel_ids = list(channel_rows)
+    for start in range(0, len(channel_ids), 50):
+        batch = channel_ids[start : start + 50]
+        try:
+            payload = request_youtube_json(
+                "channels",
+                {"part": "snippet,statistics", "id": ",".join(batch)},
+            )
+        except Exception as error:
+            errors.append(f"YouTube 频道信息：{error}")
+            continue
+        for item in payload.get("items", []):
+            channel_details[str(item.get("id") or "")] = item
+
+    video_details: dict[str, dict] = {}
+    video_ids = [video_id for row in channel_rows.values() for video_id in row["video_ids"]]
+    for start in range(0, len(video_ids), 50):
+        batch = video_ids[start : start + 50]
+        try:
+            payload = request_youtube_json(
+                "videos",
+                {"part": "snippet,statistics", "id": ",".join(batch)},
+            )
+        except Exception as error:
+            errors.append(f"YouTube 视频信息：{error}")
+            continue
+        for item in payload.get("items", []):
+            video_details[str(item.get("id") or "")] = item
+
+    leads: list[Lead] = []
+    for channel_id, row in channel_rows.items():
+        channel = channel_details.get(channel_id)
+        if not channel:
+            continue
+        snippet = channel.get("snippet") or {}
+        statistics = channel.get("statistics") or {}
+        name = clean_text(str(snippet.get("title") or channel_id))
+        description = clean_text(str(snippet.get("description") or ""))
+        if not likely_individual_creator(name, description, "youtube"):
+            continue
+
+        videos = [video_details[video_id] for video_id in row["video_ids"] if video_id in video_details]
+        videos.sort(
+            key=lambda item: int((item.get("statistics") or {}).get("viewCount", 0) or 0),
+            reverse=True,
+        )
+        view_counts = [parse_metric((video.get("statistics") or {}).get("viewCount")) for video in videos]
+        view_counts = [value for value in view_counts if value is not None]
+        published_dates = [
+            str((video.get("snippet") or {}).get("publishedAt") or "")
+            for video in videos
+            if (video.get("snippet") or {}).get("publishedAt")
+        ]
+        custom_url = str(snippet.get("customUrl") or "").strip()
+        if custom_url:
+            profile_url = f"https://www.youtube.com/{custom_url.lstrip('/')}"
+        else:
+            profile_url = f"https://www.youtube.com/channel/{channel_id}"
+        work_urls = [
+            f"https://www.youtube.com/watch?v={video.get('id')}"
+            for video in videos[:8]
+            if video.get("id")
+        ]
+        subscribers = parse_metric(statistics.get("subscriberCount"))
+        lead = make_lead(
+            platform="youtube",
+            name=name,
+            handle=custom_url or f"@{channel_id}",
+            profile_url=profile_url,
+            bio=description or "YouTube 公开频道",
+            source_query="、".join(sorted(row["keywords"])),
+            source_url=work_urls[0] if work_urls else profile_url,
+            featured_work_urls=work_urls,
+            followers=subscribers,
+            related_posts=len(videos),
+            min_views=max(view_counts) if view_counts else None,
+            last_post_at=max(published_dates) if published_dates else "",
+        )
+        lead.follower_verified = subscribers is not None
+        lead.follower_verified_at = datetime.now(timezone.utc).isoformat(timespec="seconds") if subscribers is not None else ""
+        lead.follower_source = "YouTube Data API" if subscribers is not None else ""
+        lead.data_quality = "YouTube 官方 API"
+        lead.activity_feedback = (
+            f"相关视频 {len(videos)} 条；最高公开播放 {max(view_counts):,}"
+            if view_counts
+            else f"相关视频 {len(videos)} 条；播放量待核验"
+        )
+        lead.verification_status = qualification_status(lead)
+        leads.append(lead)
+
+    ordered = sorted(leads, key=lambda item: (-item.score, -item.activity_score, item.handle.lower()))
+    return ordered[:limit], errors
+
+
 def collect_leads(keywords: list[str], platforms: list[str], limit: int = 50, enrich: bool = True) -> tuple[list[Lead], list[str]]:
     leads: dict[str, Lead] = {}
     errors: list[str] = []
@@ -1031,7 +1147,14 @@ def collect_leads(keywords: list[str], platforms: list[str], limit: int = 50, en
             key = lead.profile_url.rstrip("/").lower()
             leads[key] = merge_lead(leads[key], lead) if key in leads else lead
 
-    search_platforms = [platform for platform in platforms if platform not in {"github", "reddit"} and not (platform == "x" and x_api_used)]
+    if "youtube" in platforms:
+        youtube_leads, youtube_errors = search_youtube_api(keywords, per_platform_limit)
+        errors.extend(youtube_errors)
+        for lead in youtube_leads:
+            key = lead.profile_url.rstrip("/").lower()
+            leads[key] = merge_lead(leads[key], lead) if key in leads else lead
+
+    search_platforms = [platform for platform in platforms if platform not in {"github", "reddit", "youtube"} and not (platform == "x" and x_api_used)]
     queries = build_queries(keywords, search_platforms)
     for query in queries:
         source_url, blocks = search_bing(query)
@@ -1093,7 +1216,7 @@ def collect_leads(keywords: list[str], platforms: list[str], limit: int = 50, en
             lead.data_quality = "公开页面摘要" if inspected else lead.data_quality
             if index < len(ordered) - 1:
                 time.sleep(0.2)
-    return [lead for lead in ordered if publishable_lead(lead)][:limit], errors
+    return ordered, errors
 
 
 def write_results(leads: list[Lead], preserve_existing: bool = True) -> None:
@@ -1116,7 +1239,7 @@ def write_results(leads: list[Lead], preserve_existing: bool = True) -> None:
     for lead in leads:
         key = lead.profile_url.rstrip("/").lower()
         merged[key] = merge_lead(merged[key], lead) if key in merged else lead
-    final_leads = sorted((lead for lead in merged.values() if publishable_lead(lead)), key=lambda item: (-item.score, -item.activity_score, item.platform, item.handle.lower()))
+    final_leads = sorted(merged.values(), key=lambda item: (-item.score, -item.activity_score, item.platform, item.handle.lower()))
     payload = [asdict(lead) for lead in final_leads]
     RESULTS_FILE.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
     fields = list(Lead.__dataclass_fields__.keys())
@@ -1205,7 +1328,7 @@ def read_results() -> list[dict]:
         return []
     if not isinstance(payload, list):
         return []
-    return [row for row in payload if isinstance(row, dict) and row.get("platform") == "X"]
+    return [row for row in payload if isinstance(row, dict) and row.get("platform")]
 
 
 X_VERIFY_LOCK = threading.Lock()
@@ -1628,7 +1751,7 @@ def read_run_logs() -> list[dict]:
 def run_collection(keywords: list[str], platforms: list[str], limit: int, replace_existing: bool = False) -> tuple[list[Lead], list[str]]:
     before_profiles = set() if replace_existing else {str(row.get("profile_url", "")).rstrip("/").lower() for row in read_results()}
     leads, errors = collect_leads(keywords, platforms, limit=limit, enrich=True)
-    if leads or not replace_existing:
+    if leads:
         write_results(leads, preserve_existing=not replace_existing)
     after_rows = read_results()
     new_count = sum(
@@ -1672,7 +1795,7 @@ body{margin:0}.wrap{max-width:1180px;margin:0 auto;padding:28px 20px 56px}.hero{
 <section class="panel"><strong>补充导入 X 结果</strong><div class="hint">在 Chrome 的 X 搜索结果页复制你看得到的文字或主页链接，粘贴到下面；程序只抽取公开的 X 主页地址。</div><textarea id="paste" class="input" style="width:100%;min-height:90px;margin-top:12px;box-sizing:border-box" placeholder="例如：@creator_name\nhttps://x.com/creator_name"></textarea><div class="row" style="margin-top:10px"><button class="btn secondary" onclick="importPasted()">导入复制内容</button><span id="importStatus" class="hint"></span></div></section>
 <section class="panel"><div class="row"><strong>名单预览</strong><span id="count" class="hint"></span></div><div class="hint">当前列表是公开线索候选池；粉丝层级、至少 2 条相关内容和播放/浏览量 >100 会在每日任务中继续核验。</div><div class="table-wrap"><table><thead><tr><th>评分</th><th>平台</th><th>创作者</th><th>方向</th><th>公开简介/搜索摘要</th><th>来源</th></tr></thead><tbody id="tbody"></tbody></table></div><div class="footer">建议触达顺序：先看近期开源作品或教程，再通过平台公开入口联系；程序不自动发送任何内容。</div></section></main>
 <script>
-const platformOptions=[['x','X']];
+const platformOptions=[['x','X'],['youtube','YouTube']];
 document.getElementById('platforms').innerHTML=platformOptions.map(([v,l])=>`<label class="check"><input type="checkbox" value="${v}" checked> ${l}</label>`).join('');
 async function runSearch(){const status=document.getElementById('status');status.textContent='正在读取公开搜索结果，请稍等…';const keywords=document.getElementById('keywords').value.split(/[,，\n]+/).map(x=>x.trim()).filter(Boolean);const platforms=[...document.querySelectorAll('#platforms input:checked')].map(x=>x.value);const limit=Number(document.getElementById('limit').value||50);try{const res=await fetch('/api/search',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({keywords,platforms,limit})});const data=await res.json();if(!res.ok)throw new Error(data.error||'搜索失败');render(data.leads||[]);status.textContent=data.leads.length?`已完成：找到 ${data.leads.length} 条候选名单。${data.errors?.length?'部分来源不可访问，已跳过。':''}`:'公开搜索引擎没有返回可用的 X 主页。请在 Chrome 的 X 搜索结果页复制公开内容，再用下面的“导入复制内容”；这是因为 X 的登录搜索结果不会被普通搜索引擎直接开放给程序。';}catch(e){status.textContent='暂时无法完成搜索：'+e.message;}}
 function render(leads){document.getElementById('count').textContent=`共 ${leads.length} 条候选`;const body=document.getElementById('tbody');body.innerHTML=leads.length?leads.map(x=>`<tr><td class="score">${x.score}</td><td>${x.platform}</td><td><a href="${x.profile_url}" target="_blank">${esc(x.name)}</a><br><span class="hint">${esc(x.handle)}</span></td><td>${(x.categories||[]).map(t=>`<span class="tag">${esc(t)}</span>`).join('')}</td><td>${esc(x.bio||'')}</td><td>${esc(x.source_query||'')}</td></tr>`).join(''):'<tr><td colspan="6" class="empty">还没有名单，先点击“补充找名单”。</td></tr>';}
