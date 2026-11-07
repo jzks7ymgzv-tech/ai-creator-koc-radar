@@ -161,11 +161,34 @@ ORGANIZATION_TERMS = [
     "studio",
     "platform",
     "agency",
+    "technologies",
+    "technology",
+    "labs",
+    "research",
+    "foundation",
+    "university",
+    "inc",
+    "llc",
+    "ltd",
+    "media",
+    "magazine",
+    "network",
+    "community",
+    "software",
+    "games",
     "团队",
     "官方",
     "公司",
     "工作室",
+    "实验室",
+    "研究院",
+    "基金会",
 ]
+
+ORGANIZATION_TOKEN_RE = re.compile(
+    r"(?<![a-z0-9])(?:" + "|".join(re.escape(term) for term in ORGANIZATION_TERMS if term.isascii()) + r")(?![a-z0-9])",
+    re.I,
+)
 
 URL_RE = re.compile(r"https?://[^\s<>\"'，。；、！？）》】]+", re.I)
 HANDLE_RE = re.compile(r"(?<![\w])@([A-Za-z0-9_]{1,32})")
@@ -470,12 +493,34 @@ def score_lead(text: str, platform: str) -> tuple[int, str]:
             score += weight
     if platform == "x":
         score += 3
-    if any(term in lowered for term in ORGANIZATION_TERMS):
+    if organization_signal(text):
         score -= 4
     if "http" in lowered:
         score += 2
-    creator_type = "机构 / 工作室" if any(term in lowered for term in ORGANIZATION_TERMS) else "个人创作者"
+    creator_type = "机构 / 工作室" if organization_signal(text) else "个人创作者"
     return max(score, 0), creator_type
+
+
+def organization_signal(text: str) -> bool:
+    lowered = clean_text(text).lower()
+    if any(term in lowered for term in ("官方", "公司", "工作室", "实验室", "研究院", "基金会")):
+        return True
+    return bool(ORGANIZATION_TOKEN_RE.search(lowered))
+
+
+def likely_individual_creator(name: str, bio: str, platform: str, account_type: str = "") -> bool:
+    if account_type and account_type.lower() not in {"user", "person", "individual"}:
+        return False
+    text = clean_text(f"{name} {bio}")
+    if organization_signal(text):
+        return False
+    lowered = text.lower()
+    handle = clean_text(name).lower().replace("@", "")
+    if any(token in handle for token in ("official", "_inc", "-inc", "_llc", "-llc", "_studio", "-studio", "_labs", "-labs")):
+        return False
+    if platform == "github" and account_type == "Organization":
+        return False
+    return True
 
 
 def infer_name(handle: str, anchor_text: str, block_text: str) -> str:
@@ -764,6 +809,8 @@ def search_x_api(keywords: list[str], limit: int) -> tuple[list[Lead], list[str]
             if not user or not user.get("username"):
                 continue
             username = str(user["username"])
+            if not likely_individual_creator(str(user.get("name") or username), str(user.get("description") or ""), "x"):
+                continue
             profile_url = f"https://x.com/{username}"
             metrics = tweet.get("public_metrics") or {}
             view_count = parse_metric(metrics.get("impression_count") or metrics.get("view_count"))
@@ -825,6 +872,13 @@ def search_github(keywords: list[str], limit: int) -> tuple[list[Lead], list[str
             except Exception as error:
                 errors.append(f"GitHub @{login}: {error}")
                 profile, repos = item, []
+            if not likely_individual_creator(
+                str(profile.get("name") or login),
+                str(profile.get("bio") or ""),
+                "github",
+                str(profile.get("type") or item.get("type") or ""),
+            ):
+                continue
             repo_urls = [str(repo.get("html_url")) for repo in repos if repo.get("html_url")]
             repo_stars = [int(repo.get("stargazers_count", 0) or 0) for repo in repos]
             bio = clean_text(str(profile.get("bio") or item.get("login") or ""))
@@ -961,7 +1015,7 @@ def collect_leads(keywords: list[str], platforms: list[str], limit: int = 50, en
             break
         time.sleep(0.4)
 
-    ordered = sorted(leads.values(), key=lambda item: (-item.score, -item.activity_score, item.platform, item.handle.lower()))[:limit]
+    ordered = [lead for lead in sorted(leads.values(), key=lambda item: (-item.score, -item.activity_score, item.platform, item.handle.lower())) if likely_individual_creator(lead.name, lead.bio, lead.platform.lower())][:limit]
     if enrich:
         for index, lead in enumerate(ordered):
             if lead.data_quality == "公开 API":
@@ -990,9 +1044,9 @@ def collect_leads(keywords: list[str], platforms: list[str], limit: int = 50, en
     return ordered, errors
 
 
-def write_results(leads: list[Lead]) -> None:
+def write_results(leads: list[Lead], preserve_existing: bool = True) -> None:
     DATA_DIR.mkdir(parents=True, exist_ok=True)
-    existing_rows = read_results()
+    existing_rows = read_results() if preserve_existing else []
     merged: dict[str, Lead] = {}
     for row in existing_rows:
         if not isinstance(row, dict) or not row.get("profile_url"):
@@ -1519,11 +1573,11 @@ def read_run_logs() -> list[dict]:
     return list(reversed(rows[-90:]))
 
 
-def run_collection(keywords: list[str], platforms: list[str], limit: int) -> tuple[list[Lead], list[str]]:
-    before_profiles = {str(row.get("profile_url", "")).rstrip("/").lower() for row in read_results()}
+def run_collection(keywords: list[str], platforms: list[str], limit: int, replace_existing: bool = False) -> tuple[list[Lead], list[str]]:
+    before_profiles = set() if replace_existing else {str(row.get("profile_url", "")).rstrip("/").lower() for row in read_results()}
     leads, errors = collect_leads(keywords, platforms, limit=limit, enrich=True)
     if leads:
-        write_results(leads)
+        write_results(leads, preserve_existing=not replace_existing)
     after_rows = read_results()
     new_count = sum(
         1
@@ -1771,13 +1825,14 @@ def main() -> None:
     parser.add_argument("--platforms", default="x")
     parser.add_argument("--keywords", default=", ".join(DEFAULT_KEYWORDS))
     parser.add_argument("--limit", type=int, default=50)
+    parser.add_argument("--replace", action="store_true", help="用本轮严格筛选结果替换旧名单")
     args = parser.parse_args()
     keywords = [item.strip() for item in args.keywords.split(",") if item.strip()]
     platforms = [item.strip() for item in args.platforms.split(",") if item.strip() in PLATFORM_DOMAINS]
     if not platforms:
         platforms = ["x"]
     if args.once:
-        leads, errors = run_collection(keywords, platforms, args.limit)
+        leads, errors = run_collection(keywords, platforms, args.limit, replace_existing=args.replace)
         print(json.dumps({"count": len(leads), "errors": errors}, ensure_ascii=False, indent=2))
         return
     if args.daily:
