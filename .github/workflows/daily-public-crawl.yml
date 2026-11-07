@@ -30,12 +30,13 @@ jobs:
       - name: Run public creator crawl
         env:
           X_BEARER_TOKEN: ${{ secrets.X_BEARER_TOKEN }}
+          YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           python3 creator_lead_finder.py \
             --once \
             --replace \
-            --platforms "x" \
+            --platforms "x,reddit,github,youtube,instagram" \
             --limit 100 \
             --keywords "ai,3d ai,game,ai game,roblox,steam,combos,tripo,meshy,blender,glb,astra,opus,vibe coding,aigc"
 
