@@ -30,6 +30,7 @@ jobs:
       - name: Run public creator crawl
         env:
           X_BEARER_TOKEN: ${{ secrets.X_BEARER_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           python3 creator_lead_finder.py \
             --once \
