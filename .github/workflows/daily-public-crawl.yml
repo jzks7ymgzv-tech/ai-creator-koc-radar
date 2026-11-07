@@ -35,7 +35,7 @@ jobs:
           python3 creator_lead_finder.py \
             --once \
             --replace \
-            --platforms "x,reddit,github,youtube,instagram" \
+            --platforms "x" \
             --limit 100 \
             --keywords "ai,3d ai,game,ai game,roblox,steam,combos,tripo,meshy,blender,glb,astra,opus,vibe coding,aigc"
 
