@@ -1,0 +1,92 @@
+name: AI Creator KOC Daily Crawl
+
+on:
+  schedule:
+    - cron: "0 1 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: ai-creator-daily-crawl
+  cancel-in-progress: false
+
+jobs:
+  crawl:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - name: Checkout data
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Run public creator crawl
+        env:
+          X_BEARER_TOKEN: ${{ secrets.X_BEARER_TOKEN }}
+        run: |
+          python3 ai_creator_lead_finder/creator_lead_finder.py \
+            --once \
+            --platforms "x,reddit,github,youtube,instagram" \
+            --limit 100 \
+            --keywords "ai,3d ai,game,ai game,roblox,steam,combos,tripo,meshy,blender,glb,astra,opus,vibe coding,aigc"
+
+      - name: Write run summary
+        if: always()
+        run: |
+          python3 - <<'PY' >> "$GITHUB_STEP_SUMMARY"
+          import json
+          from pathlib import Path
+
+          results_path = Path("ai_creator_lead_finder/data/leads.json")
+          runs_path = Path("ai_creator_lead_finder/data/runs.jsonl")
+          rows = json.loads(results_path.read_text(encoding="utf-8")) if results_path.exists() else []
+          run_row = {}
+          if runs_path.exists():
+              for line in runs_path.read_text(encoding="utf-8").splitlines():
+                  if line.strip():
+                      run_row = json.loads(line)
+          print("## AI 创作者每日抓取")
+          print(f"- 当前名单：{len(rows)} 条")
+          print(f"- 本次更新：{run_row.get('new_or_updated', 0)} 条")
+          print(f"- 本次新增：{run_row.get('new_count', 0)} 条")
+          print(f"- 运行时间：{run_row.get('run_at', '—')}")
+          errors = run_row.get("errors", [])
+          print(f"- 异常来源：{len(errors)} 个")
+          if errors:
+              print("\n### 需要复核")
+              for error in errors[:10]:
+                  print(f"- {error}")
+          PY
+
+      - name: Save updated public data
+        if: success()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add ai_creator_lead_finder/data/leads.json \
+            ai_creator_lead_finder/data/leads.csv \
+            ai_creator_lead_finder/data/runs.jsonl
+          if git diff --cached --quiet; then
+            echo "没有新的名单变化。"
+          else
+            git commit -m "chore: update daily creator leads"
+            git push
+          fi
+
+      - name: Upload daily data snapshot
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ai-creator-daily-data
+          path: |
+            ai_creator_lead_finder/data/leads.json
+            ai_creator_lead_finder/data/leads.csv
+            ai_creator_lead_finder/data/runs.jsonl
+          retention-days: 30
