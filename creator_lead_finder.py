@@ -542,12 +542,16 @@ def build_queries(keywords: list[str], platforms: list[str]) -> list[str]:
 
 
 def request_json(url: str, timeout: int = 20) -> dict | list:
+    headers = {
+        "User-Agent": "AI-Creator-Radar/1.0 (public research tool)",
+        "Accept": "application/json",
+    }
+    github_token = os.environ.get("GITHUB_TOKEN", "").strip()
+    if github_token and urlparse(url).hostname == "api.github.com":
+        headers["Authorization"] = f"Bearer {github_token}"
     request = Request(
         url,
-        headers={
-            "User-Agent": "AI-Creator-Radar/1.0 (public research tool)",
-            "Accept": "application/json",
-        },
+        headers=headers,
     )
     with urlopen(request, timeout=timeout) as response:
         return json.loads(response.read().decode("utf-8", errors="replace"))
