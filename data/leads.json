@@ -2483,7 +2483,7 @@
     "source_url": "https://api.github.com/search/users?q=3d+ai+in%3Abio&per_page=30",
     "contact_route": "先看主页和作品，再通过平台公开入口联系",
     "captured_at": "2026-11-11T04:05:02+00:00",
-    "followers": 320,
+    "followers": 321,
     "follower_tier": ">=300",
     "follower_verified": false,
     "follower_verified_at": "",
@@ -6686,7 +6686,7 @@
     "source_url": "https://api.github.com/search/users?q=ai+in%3Abio&per_page=30",
     "contact_route": "先看主页和作品，再通过平台公开入口联系",
     "captured_at": "2026-11-09T02:44:02+00:00",
-    "followers": 10190,
+    "followers": 10192,
     "follower_tier": ">=10,000",
     "follower_verified": false,
     "follower_verified_at": "",
@@ -7086,7 +7086,7 @@
     "source_url": "https://api.github.com/search/users?q=3d+ai+in%3Abio&per_page=30",
     "contact_route": "先看主页和作品，再通过平台公开入口联系",
     "captured_at": "2026-11-11T04:05:04+00:00",
-    "followers": 128,
+    "followers": 129,
     "follower_tier": ">=100",
     "follower_verified": false,
     "follower_verified_at": "",
@@ -7215,7 +7215,8 @@
       "https://github.com/IvanMurzak/Unity-MCP",
       "https://github.com/IvanMurzak/homebrew-tap",
       "https://github.com/IvanMurzak/GitHub-Runner-Scaler-UI",
-      "https://github.com/IvanMurzak/GameDev-MCP-Server"
+      "https://github.com/IvanMurzak/GameDev-MCP-Server",
+      "https://github.com/IvanMurzak/AI-Game-Dev-CLI-Core"
     ],
     "contact_links": [
       "https://ivan-murzak.com"
@@ -8854,7 +8855,7 @@
     "related_posts": 8093,
     "min_views": null,
     "activity_score": 40,
-    "activity_feedback": "公开仓库 8093 个；最高仓库 Stars 1（GitHub 不公开播放量）",
+    "activity_feedback": "相关内容 8093 条；播放/浏览量待核验",
     "featured_work_urls": [
       "https://github.com/gamerhackuz/Asynforge",
       "https://github.com/gamerhackuz/Instagram-Services",
@@ -8866,7 +8867,7 @@
     "topics": [
       "game"
     ],
-    "verification_status": "API 已确认，内容门槛需人工复核",
+    "verification_status": "待核验粉丝量",
     "data_quality": "公开 API",
     "last_post_at": "",
     "hicreator_verified": false,
@@ -12158,7 +12159,7 @@
     "source_url": "https://api.github.com/search/users?q=ai+game+in%3Abio&per_page=30",
     "contact_route": "先看主页和作品，再通过平台公开入口联系",
     "captured_at": "2026-11-11T04:05:34+00:00",
-    "followers": 44,
+    "followers": 45,
     "follower_tier": "<100",
     "follower_verified": false,
     "follower_verified_at": "",
@@ -12280,16 +12281,17 @@
     "follower_verified": false,
     "follower_verified_at": "",
     "follower_source": "",
-    "related_posts": 21,
+    "related_posts": 22,
     "min_views": null,
     "activity_score": 40,
-    "activity_feedback": "相关内容 21 条；播放/浏览量待核验",
+    "activity_feedback": "相关内容 22 条；播放/浏览量待核验",
     "featured_work_urls": [
       "https://github.com/aiplay/LinkSwift",
       "https://github.com/aiplay/English-level-up-tips",
       "https://github.com/aiplay/oh-my-brain",
       "https://github.com/aiplay/claude-code",
-      "https://github.com/aiplay/my-skills"
+      "https://github.com/aiplay/my-skills",
+      "https://github.com/aiplay/HGhubX"
     ],
     "contact_links": [
       "aiplay.github.io"
@@ -12451,7 +12453,7 @@
     "source_url": "https://api.github.com/search/users?q=ai+game+in%3Abio&per_page=30",
     "contact_route": "先看主页和作品，再通过平台公开入口联系",
     "captured_at": "2026-11-11T04:05:26+00:00",
-    "followers": 354,
+    "followers": 355,
     "follower_tier": ">=300",
     "follower_verified": false,
     "follower_verified_at": "",
@@ -12919,7 +12921,7 @@
     "related_posts": 30,
     "min_views": null,
     "activity_score": 40,
-    "activity_feedback": "公开仓库 30 个；最高仓库 Stars 0（GitHub 不公开播放量）",
+    "activity_feedback": "相关内容 30 条；播放/浏览量待核验",
     "featured_work_urls": [
       "https://github.com/gamersprogrammer/gamersprogrammer",
       "https://github.com/gamersprogrammer/schoolportal",
@@ -12930,10 +12932,10 @@
     "contact_links": [],
     "topics": [
       "ai",
-      "game",
-      "ai game"
+      "ai game",
+      "game"
     ],
-    "verification_status": "API 已确认，内容门槛需人工复核",
+    "verification_status": "待核验粉丝量",
     "data_quality": "公开 API",
     "last_post_at": "",
     "hicreator_verified": false,
@@ -12975,7 +12977,7 @@
     "related_posts": 196,
     "min_views": null,
     "activity_score": 40,
-    "activity_feedback": "公开仓库 196 个；最高仓库 Stars 6（GitHub 不公开播放量）",
+    "activity_feedback": "相关内容 196 条；播放/浏览量待核验",
     "featured_work_urls": [
       "https://github.com/liam-middlebrook/Vulkan-LoaderAndValidationLayers",
       "https://github.com/liam-middlebrook/Holo",
@@ -12986,10 +12988,10 @@
     "contact_links": [],
     "topics": [
       "ai",
-      "game",
-      "ai game"
+      "ai game",
+      "game"
     ],
-    "verification_status": "API 已确认，内容门槛需人工复核",
+    "verification_status": "待核验粉丝量",
     "data_quality": "公开 API",
     "last_post_at": "",
     "hicreator_verified": false,
@@ -13031,7 +13033,7 @@
     "related_posts": 57,
     "min_views": null,
     "activity_score": 40,
-    "activity_feedback": "公开仓库 57 个；最高仓库 Stars 358（GitHub 不公开播放量）",
+    "activity_feedback": "相关内容 57 条；播放/浏览量待核验",
     "featured_work_urls": [
       "https://github.com/mashb1t/solring-extension",
       "https://github.com/mashb1t/Fooocus",
@@ -13044,10 +13046,10 @@
     ],
     "topics": [
       "ai",
-      "game",
-      "ai game"
+      "ai game",
+      "game"
     ],
-    "verification_status": "API 已确认，内容门槛需人工复核",
+    "verification_status": "待核验粉丝量",
     "data_quality": "公开 API",
     "last_post_at": "",
     "hicreator_verified": false,
@@ -13089,7 +13091,7 @@
     "related_posts": 429,
     "min_views": null,
     "activity_score": 40,
-    "activity_feedback": "公开仓库 429 个；最高仓库 Stars 69（GitHub 不公开播放量）",
+    "activity_feedback": "相关内容 429 条；播放/浏览量待核验",
     "featured_work_urls": [
       "https://github.com/yangruihan/Notes",
       "https://github.com/yangruihan/norsefire",
@@ -13100,10 +13102,10 @@
     "contact_links": [],
     "topics": [
       "ai",
-      "game",
-      "ai game"
+      "ai game",
+      "game"
     ],
-    "verification_status": "API 已确认，内容门槛需人工复核",
+    "verification_status": "待核验粉丝量",
     "data_quality": "公开 API",
     "last_post_at": "",
     "hicreator_verified": false,
@@ -16165,7 +16167,7 @@
     "related_posts": 146,
     "min_views": null,
     "activity_score": 40,
-    "activity_feedback": "公开仓库 146 个；最高仓库 Stars 594（GitHub 不公开播放量）",
+    "activity_feedback": "相关内容 146 条；播放/浏览量待核验",
     "featured_work_urls": [
       "https://github.com/SergeyMakeev/SlotMap",
       "https://github.com/SergeyMakeev/TalkToMe",
@@ -16179,7 +16181,7 @@
     "topics": [
       "roblox"
     ],
-    "verification_status": "API 已确认，内容门槛需人工复核",
+    "verification_status": "待核验粉丝量",
     "data_quality": "公开 API",
     "last_post_at": "",
     "hicreator_verified": false,
@@ -16213,7 +16215,7 @@
     "source_url": "https://api.github.com/search/users?q=steam+in%3Abio&per_page=30",
     "contact_route": "先看主页和作品，再通过平台公开入口联系",
     "captured_at": "2026-11-13T01:55:55+00:00",
-    "followers": 94,
+    "followers": 95,
     "follower_tier": "<100",
     "follower_verified": false,
     "follower_verified_at": "",
@@ -16221,7 +16223,7 @@
     "related_posts": 53,
     "min_views": null,
     "activity_score": 40,
-    "activity_feedback": "公开仓库 53 个；最高仓库 Stars 888（GitHub 不公开播放量）",
+    "activity_feedback": "相关内容 53 条；播放/浏览量待核验",
     "featured_work_urls": [
       "https://github.com/steam3d/MagicPods-Windows",
       "https://github.com/steam3d/MagicPodsLinux",
@@ -16233,7 +16235,7 @@
     "topics": [
       "steam"
     ],
-    "verification_status": "API 已确认，内容门槛需人工复核",
+    "verification_status": "待核验粉丝量",
     "data_quality": "公开 API",
     "last_post_at": "",
     "hicreator_verified": false,
@@ -22543,7 +22545,7 @@
     "related_posts": 1667,
     "min_views": null,
     "activity_score": 40,
-    "activity_feedback": "公开仓库 1667 个；最高仓库 Stars 17（GitHub 不公开播放量）",
+    "activity_feedback": "相关内容 1667 条；播放/浏览量待核验",
     "featured_work_urls": [
       "https://github.com/dappcenter/MOBOX-Farm",
       "https://github.com/dappcenter/Wappalyzer",
@@ -22555,7 +22557,7 @@
     "topics": [
       "game"
     ],
-    "verification_status": "API 已确认，内容门槛需人工复核",
+    "verification_status": "待核验粉丝量",
     "data_quality": "公开 API",
     "last_post_at": "",
     "hicreator_verified": false,
@@ -22597,7 +22599,7 @@
     "related_posts": 9,
     "min_views": null,
     "activity_score": 40,
-    "activity_feedback": "公开仓库 9 个；最高仓库 Stars 20929（GitHub 不公开播放量）",
+    "activity_feedback": "相关内容 9 条；播放/浏览量待核验",
     "featured_work_urls": [
       "https://github.com/game1024/OpenSpeedy",
       "https://github.com/game1024/Penio",
@@ -22609,7 +22611,7 @@
     "topics": [
       "game"
     ],
-    "verification_status": "API 已确认，内容门槛需人工复核",
+    "verification_status": "待核验粉丝量",
     "data_quality": "公开 API",
     "last_post_at": "",
     "hicreator_verified": false,
@@ -22643,7 +22645,7 @@
     "source_url": "https://api.github.com/search/users?q=game+in%3Abio&per_page=30",
     "contact_route": "先看主页和作品，再通过平台公开入口联系",
     "captured_at": "2026-11-13T01:54:52+00:00",
-    "followers": 252,
+    "followers": 253,
     "follower_tier": ">=100",
     "follower_verified": false,
     "follower_verified_at": "",
@@ -22651,7 +22653,7 @@
     "related_posts": 410,
     "min_views": null,
     "activity_score": 40,
-    "activity_feedback": "公开仓库 410 个；最高仓库 Stars 18（GitHub 不公开播放量）",
+    "activity_feedback": "相关内容 410 条；播放/浏览量待核验",
     "featured_work_urls": [
       "https://github.com/gameblabla/pocketsnes-nspire",
       "https://github.com/gameblabla/gp32emu",
@@ -22665,7 +22667,7 @@
     "topics": [
       "game"
     ],
-    "verification_status": "API 已确认，内容门槛需人工复核",
+    "verification_status": "待核验粉丝量",
     "data_quality": "公开 API",
     "last_post_at": "",
     "hicreator_verified": false,
@@ -22707,7 +22709,7 @@
     "related_posts": 96,
     "min_views": null,
     "activity_score": 40,
-    "activity_feedback": "公开仓库 96 个；最高仓库 Stars 266（GitHub 不公开播放量）",
+    "activity_feedback": "相关内容 96 条；播放/浏览量待核验",
     "featured_work_urls": [
       "https://github.com/gameknife/gkNextEngine",
       "https://github.com/gameknife/smdconv",
@@ -22721,7 +22723,7 @@
     "topics": [
       "game"
     ],
-    "verification_status": "API 已确认，内容门槛需人工复核",
+    "verification_status": "待核验粉丝量",
     "data_quality": "公开 API",
     "last_post_at": "",
     "hicreator_verified": false,
@@ -22763,7 +22765,7 @@
     "related_posts": 25,
     "min_views": null,
     "activity_score": 40,
-    "activity_feedback": "公开仓库 25 个；最高仓库 Stars 1736（GitHub 不公开播放量）",
+    "activity_feedback": "相关内容 25 条；播放/浏览量待核验",
     "featured_work_urls": [
       "https://github.com/gamelinux/passivedns",
       "https://github.com/gamelinux/passivednsrust",
@@ -22777,7 +22779,7 @@
     "topics": [
       "game"
     ],
-    "verification_status": "API 已确认，内容门槛需人工复核",
+    "verification_status": "待核验粉丝量",
     "data_quality": "公开 API",
     "last_post_at": "",
     "hicreator_verified": false,
@@ -22819,7 +22821,7 @@
     "related_posts": 103,
     "min_views": null,
     "activity_score": 40,
-    "activity_feedback": "公开仓库 103 个；最高仓库 Stars 2（GitHub 不公开播放量）",
+    "activity_feedback": "相关内容 103 条；播放/浏览量待核验",
     "featured_work_urls": [
       "https://github.com/gamemaker1/diffusedit",
       "https://github.com/gamemaker1/activation-monitors",
@@ -22833,7 +22835,7 @@
     "topics": [
       "game"
     ],
-    "verification_status": "API 已确认，内容门槛需人工复核",
+    "verification_status": "待核验粉丝量",
     "data_quality": "公开 API",
     "last_post_at": "",
     "hicreator_verified": false,
@@ -22875,7 +22877,7 @@
     "related_posts": 2,
     "min_views": null,
     "activity_score": 40,
-    "activity_feedback": "公开仓库 2 个；最高仓库 Stars 1229（GitHub 不公开播放量）",
+    "activity_feedback": "相关内容 2 条；播放/浏览量待核验",
     "featured_work_urls": [
       "https://github.com/gamemcu/www-genshin",
       "https://github.com/gamemcu/interstellar-next"
@@ -22884,7 +22886,7 @@
     "topics": [
       "game"
     ],
-    "verification_status": "API 已确认，内容门槛需人工复核",
+    "verification_status": "待核验粉丝量",
     "data_quality": "公开 API",
     "last_post_at": "",
     "hicreator_verified": false,
@@ -22926,7 +22928,7 @@
     "related_posts": 49,
     "min_views": null,
     "activity_score": 40,
-    "activity_feedback": "公开仓库 49 个；最高仓库 Stars 1（GitHub 不公开播放量）",
+    "activity_feedback": "相关内容 49 条；播放/浏览量待核验",
     "featured_work_urls": [
       "https://github.com/GamerCleanVic/GamerCleanVic",
       "https://github.com/GamerCleanVic/c-lang",
@@ -22940,7 +22942,7 @@
     "topics": [
       "game"
     ],
-    "verification_status": "API 已确认，内容门槛需人工复核",
+    "verification_status": "待核验粉丝量",
     "data_quality": "公开 API",
     "last_post_at": "",
     "hicreator_verified": false,
@@ -22982,7 +22984,7 @@
     "related_posts": 87,
     "min_views": null,
     "activity_score": 40,
-    "activity_feedback": "公开仓库 87 个；最高仓库 Stars 102（GitHub 不公开播放量）",
+    "activity_feedback": "相关内容 87 条；播放/浏览量待核验",
     "featured_work_urls": [
       "https://github.com/GamerNoTitle/BiliLive-Utility",
       "https://github.com/GamerNoTitle/MHYY-AutoCheckin",
@@ -22996,7 +22998,7 @@
     "topics": [
       "game"
     ],
-    "verification_status": "API 已确认，内容门槛需人工复核",
+    "verification_status": "待核验粉丝量",
     "data_quality": "公开 API",
     "last_post_at": "",
     "hicreator_verified": false,
@@ -23038,19 +23040,20 @@
     "related_posts": 116,
     "min_views": null,
     "activity_score": 40,
-    "activity_feedback": "公开仓库 116 个；最高仓库 Stars 3771（GitHub 不公开播放量）",
+    "activity_feedback": "相关内容 116 条；播放/浏览量待核验",
     "featured_work_urls": [
       "https://github.com/Gameye98/Lazymux",
       "https://github.com/Gameye98/vbug",
       "https://github.com/Gameye98/DTL-X",
       "https://github.com/Gameye98/cheat-engine",
-      "https://github.com/Gameye98/AstraNmap"
+      "https://github.com/Gameye98/AstraNmap",
+      "https://github.com/Gameye98/Black-Hydra"
     ],
     "contact_links": [],
     "topics": [
       "game"
     ],
-    "verification_status": "API 已确认，内容门槛需人工复核",
+    "verification_status": "待核验粉丝量",
     "data_quality": "公开 API",
     "last_post_at": "",
     "hicreator_verified": false,
@@ -23092,7 +23095,7 @@
     "related_posts": 52,
     "min_views": null,
     "activity_score": 40,
-    "activity_feedback": "公开仓库 52 个；最高仓库 Stars 0（GitHub 不公开播放量）",
+    "activity_feedback": "相关内容 52 条；播放/浏览量待核验",
     "featured_work_urls": [
       "https://github.com/Haelle/mattermost-immich-memories-bot",
       "https://github.com/Haelle/dotfiles",
@@ -23104,7 +23107,7 @@
     "topics": [
       "game"
     ],
-    "verification_status": "API 已确认，内容门槛需人工复核",
+    "verification_status": "待核验粉丝量",
     "data_quality": "公开 API",
     "last_post_at": "",
     "hicreator_verified": false,
@@ -23143,22 +23146,25 @@
     "follower_verified": false,
     "follower_verified_at": "",
     "follower_source": "",
-    "related_posts": 15127,
+    "related_posts": 15148,
     "min_views": null,
     "activity_score": 40,
-    "activity_feedback": "公开仓库 15127 个；最高仓库 Stars 0（GitHub 不公开播放量）",
+    "activity_feedback": "相关内容 15148 条；播放/浏览量待核验",
     "featured_work_urls": [
       "https://github.com/Hengle/Eglantine",
       "https://github.com/Hengle/Fyrox",
       "https://github.com/Hengle/Eglantine-MKW",
       "https://github.com/Hengle/Eglantine-MKW-DynamicFPS",
-      "https://github.com/Hengle/totk-recomp"
+      "https://github.com/Hengle/totk-recomp",
+      "https://github.com/Hengle/HoyoToon-Assets",
+      "https://github.com/Hengle/aerial-tv",
+      "https://github.com/Hengle/HGhub-MacOS-iOS-Version"
     ],
     "contact_links": [],
     "topics": [
       "game"
     ],
-    "verification_status": "API 已确认，内容门槛需人工复核",
+    "verification_status": "待核验粉丝量",
     "data_quality": "公开 API",
     "last_post_at": "",
     "hicreator_verified": false,
@@ -23200,7 +23206,7 @@
     "related_posts": 581,
     "min_views": null,
     "activity_score": 40,
-    "activity_feedback": "公开仓库 581 个；最高仓库 Stars 0（GitHub 不公开播放量）",
+    "activity_feedback": "相关内容 581 条；播放/浏览量待核验",
     "featured_work_urls": [
       "https://github.com/MBHudson/lfm3-mega-demo",
       "https://github.com/MBHudson/system_prompts_leaks",
@@ -23214,7 +23220,7 @@
     "topics": [
       "game"
     ],
-    "verification_status": "API 已确认，内容门槛需人工复核",
+    "verification_status": "待核验粉丝量",
     "data_quality": "公开 API",
     "last_post_at": "",
     "hicreator_verified": false,
@@ -23256,7 +23262,7 @@
     "related_posts": 18,
     "min_views": null,
     "activity_score": 40,
-    "activity_feedback": "公开仓库 18 个；最高仓库 Stars 2（GitHub 不公开播放量）",
+    "activity_feedback": "相关内容 18 条；播放/浏览量待核验",
     "featured_work_urls": [
       "https://github.com/SteamCodeYT/pandas_tutorial",
       "https://github.com/SteamCodeYT/Numbers-to-Words",
@@ -23268,7 +23274,7 @@
     "topics": [
       "steam"
     ],
-    "verification_status": "API 已确认，内容门槛需人工复核",
+    "verification_status": "待核验粉丝量",
     "data_quality": "公开 API",
     "last_post_at": "",
     "hicreator_verified": false,
@@ -25921,7 +25927,7 @@
     "related_posts": 0,
     "min_views": null,
     "activity_score": 0,
-    "activity_feedback": "公开仓库 0 个；最高仓库 Stars 0（GitHub 不公开播放量）",
+    "activity_feedback": "相关内容 0 条，未达 2 条；播放/浏览量待核验",
     "featured_work_urls": [],
     "contact_links": [
       "https://github.com/CloneTrooper1019/Roblox-Client-Tracker"
@@ -25930,7 +25936,7 @@
       "ai",
       "roblox"
     ],
-    "verification_status": "API 已确认，内容门槛需人工复核",
+    "verification_status": "待核验粉丝量",
     "data_quality": "公开 API",
     "last_post_at": "",
     "hicreator_verified": false,
@@ -28458,7 +28464,7 @@
     "related_posts": 11,
     "min_views": null,
     "activity_score": 40,
-    "activity_feedback": "公开仓库 11 个；最高仓库 Stars 90（GitHub 不公开播放量）",
+    "activity_feedback": "相关内容 11 条；播放/浏览量待核验",
     "featured_work_urls": [
       "https://github.com/7GrandDadPGN/LarpTranslationLayer",
       "https://github.com/7GrandDadPGN/VapeV4ForRoblox",
@@ -28472,7 +28478,7 @@
     "topics": [
       "roblox"
     ],
-    "verification_status": "API 已确认，内容门槛需人工复核",
+    "verification_status": "待核验粉丝量",
     "data_quality": "公开 API",
     "last_post_at": "",
     "hicreator_verified": false,
@@ -28514,7 +28520,7 @@
     "related_posts": 58,
     "min_views": null,
     "activity_score": 40,
-    "activity_feedback": "公开仓库 58 个；最高仓库 Stars 1（GitHub 不公开播放量）",
+    "activity_feedback": "相关内容 58 条；播放/浏览量待核验",
     "featured_work_urls": [
       "https://github.com/blackdaggaz/cs61b",
       "https://github.com/blackdaggaz/Berkeley-CS61B",
@@ -28526,7 +28532,7 @@
     "topics": [
       "roblox"
     ],
-    "verification_status": "API 已确认，内容门槛需人工复核",
+    "verification_status": "待核验粉丝量",
     "data_quality": "公开 API",
     "last_post_at": "",
     "hicreator_verified": false,
@@ -28568,13 +28574,15 @@
     "related_posts": 188,
     "min_views": null,
     "activity_score": 40,
-    "activity_feedback": "公开仓库 188 个；最高仓库 Stars 3（GitHub 不公开播放量）",
+    "activity_feedback": "相关内容 188 条；播放/浏览量待核验",
     "featured_work_urls": [
       "https://github.com/eiei114/pi-model-fallback",
       "https://github.com/eiei114/pi-startup-picker",
       "https://github.com/eiei114/pi-mdxml-context",
       "https://github.com/eiei114/verse-lint",
-      "https://github.com/eiei114/pi-superwhisper-paste"
+      "https://github.com/eiei114/pi-superwhisper-paste",
+      "https://github.com/eiei114/pi-auto-update",
+      "https://github.com/eiei114/pi-gstack-bridge"
     ],
     "contact_links": [
       "https://spot-camelotia-ca8.notion.site/Portfolio-66f9a6d667d84785afe1cecfea0fd2ab"
@@ -28582,7 +28590,7 @@
     "topics": [
       "roblox"
     ],
-    "verification_status": "API 已确认，内容门槛需人工复核",
+    "verification_status": "待核验粉丝量",
     "data_quality": "公开 API",
     "last_post_at": "",
     "hicreator_verified": false,
@@ -28621,16 +28629,17 @@
     "follower_verified": false,
     "follower_verified_at": "",
     "follower_source": "",
-    "related_posts": 91,
+    "related_posts": 92,
     "min_views": null,
     "activity_score": 40,
-    "activity_feedback": "公开仓库 91 个；最高仓库 Stars 1595（GitHub 不公开播放量）",
+    "activity_feedback": "相关内容 92 条；播放/浏览量待核验",
     "featured_work_urls": [
       "https://github.com/itsfrank/chess-app",
       "https://github.com/itsfrank/MinecraftHDL",
       "https://github.com/itsfrank/vue-typescript",
       "https://github.com/itsfrank/VerilogANN",
-      "https://github.com/itsfrank/frktest"
+      "https://github.com/itsfrank/frktest",
+      "https://github.com/itsfrank/blanc"
     ],
     "contact_links": [
       "francisobrien.com"
@@ -28638,7 +28647,7 @@
     "topics": [
       "roblox"
     ],
-    "verification_status": "API 已确认，内容门槛需人工复核",
+    "verification_status": "待核验粉丝量",
     "data_quality": "公开 API",
     "last_post_at": "",
     "hicreator_verified": false,
@@ -28680,13 +28689,14 @@
     "related_posts": 87,
     "min_views": null,
     "activity_score": 40,
-    "activity_feedback": "公开仓库 87 个；最高仓库 Stars 281（GitHub 不公开播放量）",
+    "activity_feedback": "相关内容 87 条；播放/浏览量待核验",
     "featured_work_urls": [
       "https://github.com/Nicell/loooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo.ng",
       "https://github.com/Nicell/Dissatisfaction-65",
       "https://github.com/Nicell/disk-inventory-z",
       "https://github.com/Nicell/nice60",
-      "https://github.com/Nicell/alien-signals-luau"
+      "https://github.com/Nicell/alien-signals-luau",
+      "https://github.com/Nicell/lynx"
     ],
     "contact_links": [
       "https://nick.winans.io"
@@ -28694,7 +28704,7 @@
     "topics": [
       "roblox"
     ],
-    "verification_status": "API 已确认，内容门槛需人工复核",
+    "verification_status": "待核验粉丝量",
     "data_quality": "公开 API",
     "last_post_at": "",
     "hicreator_verified": false,
@@ -28736,7 +28746,7 @@
     "related_posts": 24,
     "min_views": null,
     "activity_score": 40,
-    "activity_feedback": "公开仓库 24 个；最高仓库 Stars 27（GitHub 不公开播放量）",
+    "activity_feedback": "相关内容 24 条；播放/浏览量待核验",
     "featured_work_urls": [
       "https://github.com/oakland/Vanilla-JS-Practice",
       "https://github.com/oakland/dictionary-of-ai-coding",
@@ -28748,7 +28758,7 @@
     "topics": [
       "steam"
     ],
-    "verification_status": "API 已确认，内容门槛需人工复核",
+    "verification_status": "待核验粉丝量",
     "data_quality": "公开 API",
     "last_post_at": "",
     "hicreator_verified": false,
@@ -28790,7 +28800,7 @@
     "related_posts": 31,
     "min_views": null,
     "activity_score": 40,
-    "activity_feedback": "公开仓库 31 个；最高仓库 Stars 1（GitHub 不公开播放量）",
+    "activity_feedback": "相关内容 31 条；播放/浏览量待核验",
     "featured_work_urls": [
       "https://github.com/QingZ11/QingZ11.github.io",
       "https://github.com/QingZ11/ivy",
@@ -28802,7 +28812,7 @@
     "topics": [
       "steam"
     ],
-    "verification_status": "API 已确认，内容门槛需人工复核",
+    "verification_status": "待核验粉丝量",
     "data_quality": "公开 API",
     "last_post_at": "",
     "hicreator_verified": false,
@@ -28856,7 +28866,7 @@
     "topics": [
       "roblox"
     ],
-    "verification_status": "API 已确认，内容门槛需人工复核",
+    "verification_status": "待核验粉丝量",
     "data_quality": "公开 API",
     "last_post_at": "",
     "hicreator_verified": false,
@@ -28898,7 +28908,7 @@
     "related_posts": 21,
     "min_views": null,
     "activity_score": 40,
-    "activity_feedback": "公开仓库 21 个；最高仓库 Stars 2（GitHub 不公开播放量）",
+    "activity_feedback": "相关内容 21 条；播放/浏览量待核验",
     "featured_work_urls": [
       "https://github.com/roblox-codex/bluetooth",
       "https://github.com/roblox-codex/roblox-codex",
@@ -28912,7 +28922,7 @@
     "topics": [
       "roblox"
     ],
-    "verification_status": "API 已确认，内容门槛需人工复核",
+    "verification_status": "待核验粉丝量",
     "data_quality": "公开 API",
     "last_post_at": "",
     "hicreator_verified": false,
@@ -28954,7 +28964,7 @@
     "related_posts": 31,
     "min_views": null,
     "activity_score": 40,
-    "activity_feedback": "公开仓库 31 个；最高仓库 Stars 7（GitHub 不公开播放量）",
+    "activity_feedback": "相关内容 31 条；播放/浏览量待核验",
     "featured_work_urls": [
       "https://github.com/Roblox-Thot/DecalUploaderV2",
       "https://github.com/Roblox-Thot/storage",
@@ -28968,7 +28978,7 @@
     "topics": [
       "roblox"
     ],
-    "verification_status": "API 已确认，内容门槛需人工复核",
+    "verification_status": "待核验粉丝量",
     "data_quality": "公开 API",
     "last_post_at": "",
     "hicreator_verified": false,
@@ -29010,7 +29020,7 @@
     "related_posts": 6,
     "min_views": null,
     "activity_score": 40,
-    "activity_feedback": "公开仓库 6 个；最高仓库 Stars 2（GitHub 不公开播放量）",
+    "activity_feedback": "相关内容 6 条；播放/浏览量待核验",
     "featured_work_urls": [
       "https://github.com/robloxfpsunlockers/robloxfpsunlockers",
       "https://github.com/robloxfpsunlockers/discord-stock-api",
@@ -29022,7 +29032,7 @@
     "topics": [
       "roblox"
     ],
-    "verification_status": "API 已确认，内容门槛需人工复核",
+    "verification_status": "待核验粉丝量",
     "data_quality": "公开 API",
     "last_post_at": "",
     "hicreator_verified": false,
@@ -29064,13 +29074,67 @@
     "related_posts": 9,
     "min_views": null,
     "activity_score": 40,
-    "activity_feedback": "公开仓库 9 个；最高仓库 Stars 10（GitHub 不公开播放量）",
+    "activity_feedback": "相关内容 9 条；播放/浏览量待核验",
     "featured_work_urls": [
       "https://github.com/RobloxHackingProject/CHHub",
       "https://github.com/RobloxHackingProject/Testing",
       "https://github.com/RobloxHackingProject/dexes",
       "https://github.com/RobloxHackingProject/wiitools",
       "https://github.com/RobloxHackingProject/improblox"
+    ],
+    "contact_links": [],
+    "topics": [
+      "roblox"
+    ],
+    "verification_status": "待核验粉丝量",
+    "data_quality": "公开 API",
+    "last_post_at": "",
+    "hicreator_verified": false,
+    "hicreator_verified_at": "",
+    "hicreator_source": "",
+    "public_email": "",
+    "creator_location": "",
+    "hicreator_selected_posts": null,
+    "views_average": null,
+    "views_max": null,
+    "likes_average": null,
+    "reposts_average": null,
+    "engagement_rate": null,
+    "posts_30d": null,
+    "weekly_post_frequency": null,
+    "avg_post_interval_days": null,
+    "last_post_age": ""
+  },
+  {
+    "platform": "GitHub",
+    "name": "RobloxIce-coder",
+    "handle": "@RobloxIce-coder",
+    "profile_url": "https://github.com/RobloxIce-coder",
+    "bio": "RobloxIce-coder；公开仓库 13 个",
+    "categories": [
+      "待确认方向"
+    ],
+    "score": 2,
+    "creator_type": "个人创作者",
+    "source_query": "roblox",
+    "source_url": "https://api.github.com/search/users?q=roblox+in%3Abio&per_page=30",
+    "contact_route": "先看主页和作品，再通过平台公开入口联系",
+    "captured_at": "2026-11-14T01:51:23+00:00",
+    "followers": 18,
+    "follower_tier": "<100",
+    "follower_verified": false,
+    "follower_verified_at": "",
+    "follower_source": "",
+    "related_posts": 13,
+    "min_views": null,
+    "activity_score": 40,
+    "activity_feedback": "公开仓库 13 个；最高仓库 Stars 1（GitHub 不公开播放量）",
+    "featured_work_urls": [
+      "https://github.com/RobloxIce-coder/Roblox",
+      "https://github.com/RobloxIce-coder/Saved-Repos",
+      "https://github.com/RobloxIce-coder/Terraria-Flow",
+      "https://github.com/RobloxIce-coder/NetScanZ",
+      "https://github.com/RobloxIce-coder/C-C-C-Project"
     ],
     "contact_links": [],
     "topics": [
@@ -29118,7 +29182,7 @@
     "related_posts": 2,
     "min_views": null,
     "activity_score": 40,
-    "activity_feedback": "公开仓库 2 个；最高仓库 Stars 1（GitHub 不公开播放量）",
+    "activity_feedback": "相关内容 2 条；播放/浏览量待核验",
     "featured_work_urls": [
       "https://github.com/robloxyaoi/robloxyaoi",
       "https://github.com/robloxyaoi/test"
@@ -29129,7 +29193,7 @@
     "topics": [
       "roblox"
     ],
-    "verification_status": "API 已确认，内容门槛需人工复核",
+    "verification_status": "待核验粉丝量",
     "data_quality": "公开 API",
     "last_post_at": "",
     "hicreator_verified": false,
@@ -29171,7 +29235,7 @@
     "related_posts": 31,
     "min_views": null,
     "activity_score": 40,
-    "activity_feedback": "公开仓库 31 个；最高仓库 Stars 4（GitHub 不公开播放量）",
+    "activity_feedback": "相关内容 31 条；播放/浏览量待核验",
     "featured_work_urls": [
       "https://github.com/steam0r/kkl_ligatool",
       "https://github.com/steam0r/export123",
@@ -29183,7 +29247,7 @@
     "topics": [
       "steam"
     ],
-    "verification_status": "API 已确认，内容门槛需人工复核",
+    "verification_status": "待核验粉丝量",
     "data_quality": "公开 API",
     "last_post_at": "",
     "hicreator_verified": false,
@@ -29225,7 +29289,7 @@
     "related_posts": 107,
     "min_views": null,
     "activity_score": 40,
-    "activity_feedback": "公开仓库 107 个；最高仓库 Stars 1（GitHub 不公开播放量）",
+    "activity_feedback": "相关内容 107 条；播放/浏览量待核验",
     "featured_work_urls": [
       "https://github.com/steam88ys/Gaemoew",
       "https://github.com/steam88ys/steam88ys",
@@ -29237,7 +29301,7 @@
     "topics": [
       "steam"
     ],
-    "verification_status": "API 已确认，内容门槛需人工复核",
+    "verification_status": "待核验粉丝量",
     "data_quality": "公开 API",
     "last_post_at": "",
     "hicreator_verified": false,
@@ -29279,7 +29343,7 @@
     "related_posts": 9,
     "min_views": null,
     "activity_score": 40,
-    "activity_feedback": "公开仓库 9 个；最高仓库 Stars 576（GitHub 不公开播放量）",
+    "activity_feedback": "相关内容 9 条；播放/浏览量待核验",
     "featured_work_urls": [
       "https://github.com/SteamAchievementNotifier/SteamAchievementNotifier",
       "https://github.com/SteamAchievementNotifier/san_sanhelper.rs",
@@ -29293,7 +29357,7 @@
     "topics": [
       "steam"
     ],
-    "verification_status": "API 已确认，内容门槛需人工复核",
+    "verification_status": "待核验粉丝量",
     "data_quality": "公开 API",
     "last_post_at": "",
     "hicreator_verified": false,
@@ -29335,7 +29399,7 @@
     "related_posts": 31,
     "min_views": null,
     "activity_score": 40,
-    "activity_feedback": "公开仓库 31 个；最高仓库 Stars 17（GitHub 不公开播放量）",
+    "activity_feedback": "相关内容 31 条；播放/浏览量待核验",
     "featured_work_urls": [
       "https://github.com/SteAmarante/dashboard-smacss-gabarito",
       "https://github.com/SteAmarante/dashboard-smacss",
@@ -29347,7 +29411,7 @@
     "topics": [
       "steam"
     ],
-    "verification_status": "API 已确认，内容门槛需人工复核",
+    "verification_status": "待核验粉丝量",
     "data_quality": "公开 API",
     "last_post_at": "",
     "hicreator_verified": false,
@@ -29389,7 +29453,7 @@
     "related_posts": 77,
     "min_views": null,
     "activity_score": 40,
-    "activity_feedback": "公开仓库 77 个；最高仓库 Stars 181（GitHub 不公开播放量）",
+    "activity_feedback": "相关内容 77 条；播放/浏览量待核验",
     "featured_work_urls": [
       "https://github.com/steambap/x_war",
       "https://github.com/steambap/steambap.github.io",
@@ -29403,7 +29467,7 @@
     "topics": [
       "steam"
     ],
-    "verification_status": "API 已确认，内容门槛需人工复核",
+    "verification_status": "待核验粉丝量",
     "data_quality": "公开 API",
     "last_post_at": "",
     "hicreator_verified": false,
@@ -29445,7 +29509,7 @@
     "related_posts": 41,
     "min_views": null,
     "activity_score": 40,
-    "activity_feedback": "公开仓库 41 个；最高仓库 Stars 5（GitHub 不公开播放量）",
+    "activity_feedback": "相关内容 41 条；播放/浏览量待核验",
     "featured_work_urls": [
       "https://github.com/steamdz/STAR-LOGO-PYTHON",
       "https://github.com/steamdz/Heart-PYTHON",
@@ -29459,7 +29523,7 @@
     "topics": [
       "steam"
     ],
-    "verification_status": "API 已确认，内容门槛需人工复核",
+    "verification_status": "待核验粉丝量",
     "data_quality": "公开 API",
     "last_post_at": "",
     "hicreator_verified": false,
@@ -29493,21 +29557,23 @@
     "source_url": "https://api.github.com/search/users?q=steam+in%3Abio&per_page=30",
     "contact_route": "先看主页和作品，再通过平台公开入口联系",
     "captured_at": "2026-11-13T01:56:02+00:00",
-    "followers": 65,
+    "followers": 66,
     "follower_tier": "<100",
     "follower_verified": false,
     "follower_verified_at": "",
     "follower_source": "",
-    "related_posts": 36,
+    "related_posts": 38,
     "min_views": null,
     "activity_score": 40,
-    "activity_feedback": "公开仓库 36 个；最高仓库 Stars 315（GitHub 不公开播放量）",
+    "activity_feedback": "相关内容 38 条；播放/浏览量待核验",
     "featured_work_urls": [
       "https://github.com/SteamedBread2333/ppt-expert-agent",
       "https://github.com/SteamedBread2333/imprint",
       "https://github.com/SteamedBread2333/SteamedBread2333",
       "https://github.com/SteamedBread2333/dctc",
-      "https://github.com/SteamedBread2333/sic"
+      "https://github.com/SteamedBread2333/sic",
+      "https://github.com/SteamedBread2333/deepseek-harness",
+      "https://github.com/SteamedBread2333/minimax-image"
     ],
     "contact_links": [
       "https://steamedbread2333.github.io/fe-spec-of-futurex"
@@ -29515,7 +29581,7 @@
     "topics": [
       "steam"
     ],
-    "verification_status": "API 已确认，内容门槛需人工复核",
+    "verification_status": "待核验粉丝量",
     "data_quality": "公开 API",
     "last_post_at": "",
     "hicreator_verified": false,
@@ -29557,7 +29623,7 @@
     "related_posts": 20,
     "min_views": null,
     "activity_score": 40,
-    "activity_feedback": "公开仓库 20 个；最高仓库 Stars 6（GitHub 不公开播放量）",
+    "activity_feedback": "相关内容 20 条；播放/浏览量待核验",
     "featured_work_urls": [
       "https://github.com/SteamedFish/SteamedFish",
       "https://github.com/SteamedFish/web888-debian",
@@ -29571,7 +29637,7 @@
     "topics": [
       "steam"
     ],
-    "verification_status": "API 已确认，内容门槛需人工复核",
+    "verification_status": "待核验粉丝量",
     "data_quality": "公开 API",
     "last_post_at": "",
     "hicreator_verified": false,
@@ -29613,7 +29679,7 @@
     "related_posts": 155,
     "min_views": null,
     "activity_score": 40,
-    "activity_feedback": "公开仓库 155 个；最高仓库 Stars 0（GitHub 不公开播放量）",
+    "activity_feedback": "相关内容 155 条；播放/浏览量待核验",
     "featured_work_urls": [
       "https://github.com/Steamgx/Steamgx-laundry-and-collection",
       "https://github.com/Steamgx/Ai-rust-",
@@ -29625,7 +29691,7 @@
     "topics": [
       "steam"
     ],
-    "verification_status": "API 已确认，内容门槛需人工复核",
+    "verification_status": "待核验粉丝量",
     "data_quality": "公开 API",
     "last_post_at": "",
     "hicreator_verified": false,
@@ -29667,7 +29733,7 @@
     "related_posts": 19,
     "min_views": null,
     "activity_score": 40,
-    "activity_feedback": "公开仓库 19 个；最高仓库 Stars 415（GitHub 不公开播放量）",
+    "activity_feedback": "相关内容 19 条；播放/浏览量待核验",
     "featured_work_urls": [
       "https://github.com/steampixel/simplePHPRouter",
       "https://github.com/steampixel/simplePHPComponents",
@@ -29679,7 +29745,7 @@
     "topics": [
       "steam"
     ],
-    "verification_status": "API 已确认，内容门槛需人工复核",
+    "verification_status": "待核验粉丝量",
     "data_quality": "公开 API",
     "last_post_at": "",
     "hicreator_verified": false,
@@ -29721,7 +29787,7 @@
     "related_posts": 26,
     "min_views": null,
     "activity_score": 40,
-    "activity_feedback": "公开仓库 26 个；最高仓库 Stars 1（GitHub 不公开播放量）",
+    "activity_feedback": "相关内容 26 条；播放/浏览量待核验",
     "featured_work_urls": [
       "https://github.com/steampunk99/dragons",
       "https://github.com/steampunk99/zetagator",
@@ -29733,7 +29799,7 @@
     "topics": [
       "steam"
     ],
-    "verification_status": "API 已确认，内容门槛需人工复核",
+    "verification_status": "待核验粉丝量",
     "data_quality": "公开 API",
     "last_post_at": "",
     "hicreator_verified": false,
@@ -29775,7 +29841,7 @@
     "related_posts": 68,
     "min_views": null,
     "activity_score": 40,
-    "activity_feedback": "公开仓库 68 个；最高仓库 Stars 7（GitHub 不公开播放量）",
+    "activity_feedback": "相关内容 68 条；播放/浏览量待核验",
     "featured_work_urls": [
       "https://github.com/SteamShon/toprope",
       "https://github.com/SteamShon/seabed",
@@ -29787,7 +29853,7 @@
     "topics": [
       "steam"
     ],
-    "verification_status": "API 已确认，内容门槛需人工复核",
+    "verification_status": "待核验粉丝量",
     "data_quality": "公开 API",
     "last_post_at": "",
     "hicreator_verified": false,
@@ -29829,7 +29895,7 @@
     "related_posts": 28,
     "min_views": null,
     "activity_score": 40,
-    "activity_feedback": "公开仓库 28 个；最高仓库 Stars 64（GitHub 不公开播放量）",
+    "activity_feedback": "相关内容 28 条；播放/浏览量待核验",
     "featured_work_urls": [
       "https://github.com/sussygamedeveloper/FNAF1",
       "https://github.com/sussygamedeveloper/FNAF2",
@@ -29843,7 +29909,7 @@
     "topics": [
       "roblox"
     ],
-    "verification_status": "API 已确认，内容门槛需人工复核",
+    "verification_status": "待核验粉丝量",
     "data_quality": "公开 API",
     "last_post_at": "",
     "hicreator_verified": false,
@@ -29885,7 +29951,7 @@
     "related_posts": 10,
     "min_views": null,
     "activity_score": 40,
-    "activity_feedback": "公开仓库 10 个；最高仓库 Stars 38（GitHub 不公开播放量）",
+    "activity_feedback": "相关内容 10 条；播放/浏览量待核验",
     "featured_work_urls": [
       "https://github.com/TrixAde/scripts",
       "https://github.com/TrixAde/Roblox-Scripts",
@@ -29897,7 +29963,7 @@
     "topics": [
       "roblox"
     ],
-    "verification_status": "API 已确认，内容门槛需人工复核",
+    "verification_status": "待核验粉丝量",
     "data_quality": "公开 API",
     "last_post_at": "",
     "hicreator_verified": false,
@@ -30746,7 +30812,7 @@
     "related_posts": 0,
     "min_views": null,
     "activity_score": 0,
-    "activity_feedback": "公开仓库 0 个；最高仓库 Stars 0（GitHub 不公开播放量）",
+    "activity_feedback": "相关内容 0 条，未达 2 条；播放/浏览量待核验",
     "featured_work_urls": [],
     "contact_links": [
       "https://gamewarrior.org/"
@@ -30754,7 +30820,7 @@
     "topics": [
       "game"
     ],
-    "verification_status": "API 已确认，内容门槛需人工复核",
+    "verification_status": "待核验粉丝量",
     "data_quality": "公开 API",
     "last_post_at": "",
     "hicreator_verified": false,
@@ -31468,7 +31534,7 @@
     "related_posts": 0,
     "min_views": null,
     "activity_score": 0,
-    "activity_feedback": "公开仓库 0 个；最高仓库 Stars 0（GitHub 不公开播放量）",
+    "activity_feedback": "相关内容 0 条，未达 2 条；播放/浏览量待核验",
     "featured_work_urls": [],
     "contact_links": [
       "https://cringygif.straw.page/"
@@ -31476,7 +31542,7 @@
     "topics": [
       "roblox"
     ],
-    "verification_status": "API 已确认，内容门槛需人工复核",
+    "verification_status": "待核验粉丝量",
     "data_quality": "公开 API",
     "last_post_at": "",
     "hicreator_verified": false,
