@@ -6686,7 +6686,7 @@
     "source_url": "https://api.github.com/search/users?q=ai+in%3Abio&per_page=30",
     "contact_route": "先看主页和作品，再通过平台公开入口联系",
     "captured_at": "2026-11-09T02:44:02+00:00",
-    "followers": 10192,
+    "followers": 10194,
     "follower_tier": ">=10,000",
     "follower_verified": false,
     "follower_verified_at": "",
@@ -7216,7 +7216,8 @@
       "https://github.com/IvanMurzak/homebrew-tap",
       "https://github.com/IvanMurzak/GitHub-Runner-Scaler-UI",
       "https://github.com/IvanMurzak/GameDev-MCP-Server",
-      "https://github.com/IvanMurzak/AI-Game-Dev-CLI-Core"
+      "https://github.com/IvanMurzak/AI-Game-Dev-CLI-Core",
+      "https://github.com/IvanMurzak/ai-game-dev-plugin"
     ],
     "contact_links": [
       "https://ivan-murzak.com"
@@ -7371,7 +7372,7 @@
     "source_url": "https://api.github.com/search/users?q=3d+ai+in%3Abio&per_page=30",
     "contact_route": "先看主页和作品，再通过平台公开入口联系",
     "captured_at": "2026-11-11T04:05:06+00:00",
-    "followers": 58,
+    "followers": 59,
     "follower_tier": "<100",
     "follower_verified": false,
     "follower_verified_at": "",
@@ -7541,7 +7542,7 @@
     "source_url": "https://api.github.com/search/users?q=3d+ai+in%3Abio&per_page=30",
     "contact_route": "先看主页和作品，再通过平台公开入口联系",
     "captured_at": "2026-11-11T04:04:59+00:00",
-    "followers": 517,
+    "followers": 518,
     "follower_tier": ">=500",
     "follower_verified": false,
     "follower_verified_at": "",
@@ -7598,7 +7599,7 @@
     "source_url": "https://api.github.com/search/users?q=3d+ai+in%3Abio&per_page=30",
     "contact_route": "先看主页和作品，再通过平台公开入口联系",
     "captured_at": "2026-11-11T04:05:08+00:00",
-    "followers": 220,
+    "followers": 221,
     "follower_tier": ">=100",
     "follower_verified": false,
     "follower_verified_at": "",
@@ -11867,21 +11868,22 @@
     "source_url": "https://api.github.com/search/users?q=ai+game+in%3Abio&per_page=30",
     "contact_route": "先看主页和作品，再通过平台公开入口联系",
     "captured_at": "2026-11-11T04:05:31+00:00",
-    "followers": 2722,
+    "followers": 2723,
     "follower_tier": ">=1,000",
     "follower_verified": false,
     "follower_verified_at": "",
     "follower_source": "",
-    "related_posts": 61,
+    "related_posts": 62,
     "min_views": null,
     "activity_score": 40,
-    "activity_feedback": "相关内容 61 条；播放/浏览量待核验",
+    "activity_feedback": "相关内容 62 条；播放/浏览量待核验",
     "featured_work_urls": [
       "https://github.com/4ian/GDevelop",
       "https://github.com/4ian/GDevelop.js",
       "https://github.com/4ian/GDevelop-documentation",
       "https://github.com/4ian/GDevelop-functions",
-      "https://github.com/4ian/GDevelop-website-v2"
+      "https://github.com/4ian/GDevelop-website-v2",
+      "https://github.com/4ian/ThreeRT"
     ],
     "contact_links": [
       "https://gdevelop.io"
@@ -18197,7 +18199,8 @@
       "https://github.com/airyland/china-area-data",
       "https://github.com/airyland/Jsource",
       "https://github.com/airyland/we-extract",
-      "https://github.com/airyland/datetime.app"
+      "https://github.com/airyland/datetime.app",
+      "https://github.com/airyland/logo.surf"
     ],
     "contact_links": [],
     "topics": [
@@ -22591,7 +22594,7 @@
     "source_url": "https://api.github.com/search/users?q=game+in%3Abio&per_page=30",
     "contact_route": "先看主页和作品，再通过平台公开入口联系",
     "captured_at": "2026-11-13T01:55:03+00:00",
-    "followers": 392,
+    "followers": 394,
     "follower_tier": ">=300",
     "follower_verified": false,
     "follower_verified_at": "",
@@ -22659,7 +22662,10 @@
       "https://github.com/gameblabla/gp32emu",
       "https://github.com/gameblabla/CLoopy",
       "https://github.com/gameblabla/anarch_saturn_cart",
-      "https://github.com/gameblabla/SwanEmu"
+      "https://github.com/gameblabla/SwanEmu",
+      "https://github.com/gameblabla/doompcfx",
+      "https://github.com/gameblabla/oswan",
+      "https://github.com/gameblabla/SpaceCadetPinballGC"
     ],
     "contact_links": [
       "https://gameblabla.github.io"
@@ -23032,7 +23038,7 @@
     "source_url": "https://api.github.com/search/users?q=game+in%3Abio&per_page=30",
     "contact_route": "先看主页和作品，再通过平台公开入口联系",
     "captured_at": "2026-11-13T01:54:49+00:00",
-    "followers": 1607,
+    "followers": 1608,
     "follower_tier": ">=1,000",
     "follower_verified": false,
     "follower_verified_at": "",
@@ -23141,7 +23147,7 @@
     "source_url": "https://api.github.com/search/users?q=game+in%3Abio&per_page=30",
     "contact_route": "先看主页和作品，再通过平台公开入口联系",
     "captured_at": "2026-11-13T01:54:59+00:00",
-    "followers": 313,
+    "followers": 314,
     "follower_tier": ">=300",
     "follower_verified": false,
     "follower_verified_at": "",
@@ -23203,16 +23209,17 @@
     "follower_verified": false,
     "follower_verified_at": "",
     "follower_source": "",
-    "related_posts": 581,
+    "related_posts": 582,
     "min_views": null,
     "activity_score": 40,
-    "activity_feedback": "相关内容 581 条；播放/浏览量待核验",
+    "activity_feedback": "相关内容 582 条；播放/浏览量待核验",
     "featured_work_urls": [
       "https://github.com/MBHudson/lfm3-mega-demo",
       "https://github.com/MBHudson/system_prompts_leaks",
       "https://github.com/MBHudson/awesome-ai-system-prompts",
       "https://github.com/MBHudson/system-prompts-and-models-of-ai-tools",
-      "https://github.com/MBHudson/FreeToken"
+      "https://github.com/MBHudson/FreeToken",
+      "https://github.com/MBHudson/sapper-v2"
     ],
     "contact_links": [
       "illegalwebsite.com"
@@ -25919,7 +25926,7 @@
     "source_url": "https://api.github.com/search/users?q=roblox+in%3Abio&per_page=30",
     "contact_route": "先看主页和作品，再通过平台公开入口联系",
     "captured_at": "2026-11-13T01:55:35+00:00",
-    "followers": 133,
+    "followers": 134,
     "follower_tier": ">=100",
     "follower_verified": false,
     "follower_verified_at": "",
@@ -28582,7 +28589,8 @@
       "https://github.com/eiei114/verse-lint",
       "https://github.com/eiei114/pi-superwhisper-paste",
       "https://github.com/eiei114/pi-auto-update",
-      "https://github.com/eiei114/pi-gstack-bridge"
+      "https://github.com/eiei114/pi-gstack-bridge",
+      "https://github.com/eiei114/verse-fmt"
     ],
     "contact_links": [
       "https://spot-camelotia-ca8.notion.site/Portfolio-66f9a6d667d84785afe1cecfea0fd2ab"
@@ -28681,7 +28689,7 @@
     "source_url": "https://api.github.com/search/users?q=roblox+in%3Abio&per_page=30",
     "contact_route": "先看主页和作品，再通过平台公开入口联系",
     "captured_at": "2026-11-13T01:55:36+00:00",
-    "followers": 261,
+    "followers": 262,
     "follower_tier": ">=100",
     "follower_verified": false,
     "follower_verified_at": "",
@@ -29128,7 +29136,7 @@
     "related_posts": 13,
     "min_views": null,
     "activity_score": 40,
-    "activity_feedback": "公开仓库 13 个；最高仓库 Stars 1（GitHub 不公开播放量）",
+    "activity_feedback": "相关内容 13 条；播放/浏览量待核验",
     "featured_work_urls": [
       "https://github.com/RobloxIce-coder/Roblox",
       "https://github.com/RobloxIce-coder/Saved-Repos",
@@ -29140,7 +29148,7 @@
     "topics": [
       "roblox"
     ],
-    "verification_status": "API 已确认，内容门槛需人工复核",
+    "verification_status": "待核验粉丝量",
     "data_quality": "公开 API",
     "last_post_at": "",
     "hicreator_verified": false,
