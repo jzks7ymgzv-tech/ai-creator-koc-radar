@@ -7217,7 +7217,8 @@
       "https://github.com/IvanMurzak/GitHub-Runner-Scaler-UI",
       "https://github.com/IvanMurzak/GameDev-MCP-Server",
       "https://github.com/IvanMurzak/AI-Game-Dev-CLI-Core",
-      "https://github.com/IvanMurzak/ai-game-dev-plugin"
+      "https://github.com/IvanMurzak/ai-game-dev-plugin",
+      "https://github.com/IvanMurzak/Unreal-MCP"
     ],
     "contact_links": [
       "https://ivan-murzak.com"
@@ -7265,16 +7266,18 @@
     "follower_verified": false,
     "follower_verified_at": "",
     "follower_source": "",
-    "related_posts": 483,
+    "related_posts": 485,
     "min_views": null,
     "activity_score": 40,
-    "activity_feedback": "相关内容 483 条；播放/浏览量待核验",
+    "activity_feedback": "相关内容 485 条；播放/浏览量待核验",
     "featured_work_urls": [
       "https://github.com/jreuben11/llvm-ir-builder",
       "https://github.com/jreuben11/xla-serving",
       "https://github.com/jreuben11/wayland-ricing-guide",
       "https://github.com/jreuben11/Neural-Rendering-in-Action",
-      "https://github.com/jreuben11/AWS-EKS-Essentials"
+      "https://github.com/jreuben11/AWS-EKS-Essentials",
+      "https://github.com/jreuben11/warp",
+      "https://github.com/jreuben11/kimi-k3-in-c"
     ],
     "contact_links": [],
     "topics": [
@@ -7542,7 +7545,7 @@
     "source_url": "https://api.github.com/search/users?q=3d+ai+in%3Abio&per_page=30",
     "contact_route": "先看主页和作品，再通过平台公开入口联系",
     "captured_at": "2026-11-11T04:04:59+00:00",
-    "followers": 518,
+    "followers": 519,
     "follower_tier": ">=500",
     "follower_verified": false,
     "follower_verified_at": "",
@@ -7557,7 +7560,8 @@
       "https://github.com/neka-nat/probreg",
       "https://github.com/neka-nat/cad3dify",
       "https://github.com/neka-nat/fullbody-pose-maker",
-      "https://github.com/neka-nat/agent3dify"
+      "https://github.com/neka-nat/agent3dify",
+      "https://github.com/neka-nat/cupoch"
     ],
     "contact_links": [
       "https://x.com/neka_nat"
@@ -11869,7 +11873,7 @@
     "source_url": "https://api.github.com/search/users?q=ai+game+in%3Abio&per_page=30",
     "contact_route": "先看主页和作品，再通过平台公开入口联系",
     "captured_at": "2026-11-11T04:05:31+00:00",
-    "followers": 2724,
+    "followers": 2725,
     "follower_tier": ">=1,000",
     "follower_verified": false,
     "follower_verified_at": "",
@@ -12285,17 +12289,18 @@
     "follower_verified": false,
     "follower_verified_at": "",
     "follower_source": "",
-    "related_posts": 22,
+    "related_posts": 23,
     "min_views": null,
     "activity_score": 40,
-    "activity_feedback": "相关内容 22 条；播放/浏览量待核验",
+    "activity_feedback": "相关内容 23 条；播放/浏览量待核验",
     "featured_work_urls": [
       "https://github.com/aiplay/LinkSwift",
       "https://github.com/aiplay/English-level-up-tips",
       "https://github.com/aiplay/oh-my-brain",
       "https://github.com/aiplay/claude-code",
       "https://github.com/aiplay/my-skills",
-      "https://github.com/aiplay/HGhubX"
+      "https://github.com/aiplay/HGhubX",
+      "https://github.com/aiplay/bilipicks"
     ],
     "contact_links": [
       "aiplay.github.io"
@@ -12575,21 +12580,22 @@
     "source_url": "https://api.github.com/search/users?q=ai+game+in%3Abio&per_page=30",
     "contact_route": "先看主页和作品，再通过平台公开入口联系",
     "captured_at": "2026-11-11T04:05:32+00:00",
-    "followers": 392,
+    "followers": 393,
     "follower_tier": ">=300",
     "follower_verified": false,
     "follower_verified_at": "",
     "follower_source": "",
-    "related_posts": 42,
+    "related_posts": 43,
     "min_views": null,
     "activity_score": 40,
-    "activity_feedback": "相关内容 42 条；播放/浏览量待核验",
+    "activity_feedback": "相关内容 43 条；播放/浏览量待核验",
     "featured_work_urls": [
       "https://github.com/anantn/hn-chatgpt-plugin",
       "https://github.com/anantn/thinmusic",
       "https://github.com/anantn/agent-tincan",
       "https://github.com/anantn/web9",
-      "https://github.com/anantn/anantn.github.io"
+      "https://github.com/anantn/anantn.github.io",
+      "https://github.com/anantn/executorch"
     ],
     "contact_links": [
       "https://www.kix.in/"
@@ -16163,7 +16169,7 @@
     "source_url": "https://api.github.com/search/users?q=roblox+in%3Abio&per_page=30",
     "contact_route": "先看主页和作品，再通过平台公开入口联系",
     "captured_at": "2026-11-13T01:55:30+00:00",
-    "followers": 488,
+    "followers": 489,
     "follower_tier": ">=300",
     "follower_verified": false,
     "follower_verified_at": "",
@@ -16178,7 +16184,9 @@
       "https://github.com/SergeyMakeev/smmalloc",
       "https://github.com/SergeyMakeev/TaskScheduler",
       "https://github.com/SergeyMakeev/ExcaliburHash",
-      "https://github.com/SergeyMakeev/RobloxAvatarExporter"
+      "https://github.com/SergeyMakeev/RobloxAvatarExporter",
+      "https://github.com/SergeyMakeev/ChunkedVector",
+      "https://github.com/SergeyMakeev/Zmeya"
     ],
     "contact_links": [
       "http://linkedin.com/in/sergeymakeev/"
@@ -18014,7 +18022,7 @@
     "source_url": "https://api.github.com/search/users?q=ai+in%3Abio&per_page=30",
     "contact_route": "先看主页和作品，再通过平台公开入口联系",
     "captured_at": "2026-11-09T02:44:10+00:00",
-    "followers": 5852,
+    "followers": 5853,
     "follower_tier": ">=5,000",
     "follower_verified": false,
     "follower_verified_at": "",
@@ -18132,7 +18140,7 @@
     "source_url": "https://api.github.com/search/users?q=ai+in%3Abio&per_page=30",
     "contact_route": "先看主页和作品，再通过平台公开入口联系",
     "captured_at": "2026-11-09T02:44:12+00:00",
-    "followers": 1909,
+    "followers": 1910,
     "follower_tier": ">=1,000",
     "follower_verified": false,
     "follower_verified_at": "",
@@ -22652,7 +22660,7 @@
     "source_url": "https://api.github.com/search/users?q=game+in%3Abio&per_page=30",
     "contact_route": "先看主页和作品，再通过平台公开入口联系",
     "captured_at": "2026-11-13T01:54:52+00:00",
-    "followers": 253,
+    "followers": 254,
     "follower_tier": ">=100",
     "follower_verified": false,
     "follower_verified_at": "",
@@ -22986,7 +22994,7 @@
     "source_url": "https://api.github.com/search/users?q=game+in%3Abio&per_page=30",
     "contact_route": "先看主页和作品，再通过平台公开入口联系",
     "captured_at": "2026-11-13T01:54:57+00:00",
-    "followers": 278,
+    "followers": 279,
     "follower_tier": ">=100",
     "follower_verified": false,
     "follower_verified_at": "",
@@ -23154,15 +23162,15 @@
     "source_url": "https://api.github.com/search/users?q=game+in%3Abio&per_page=30",
     "contact_route": "先看主页和作品，再通过平台公开入口联系",
     "captured_at": "2026-11-13T01:54:59+00:00",
-    "followers": 316,
+    "followers": 317,
     "follower_tier": ">=300",
     "follower_verified": false,
     "follower_verified_at": "",
     "follower_source": "",
-    "related_posts": 15163,
+    "related_posts": 15224,
     "min_views": null,
     "activity_score": 40,
-    "activity_feedback": "相关内容 15163 条；播放/浏览量待核验",
+    "activity_feedback": "相关内容 15224 条；播放/浏览量待核验",
     "featured_work_urls": [
       "https://github.com/Hengle/Eglantine",
       "https://github.com/Hengle/Fyrox",
@@ -23211,7 +23219,7 @@
     "source_url": "https://api.github.com/search/users?q=game+in%3Abio&per_page=30",
     "contact_route": "先看主页和作品，再通过平台公开入口联系",
     "captured_at": "2026-11-13T01:54:48+00:00",
-    "followers": 135,
+    "followers": 136,
     "follower_tier": ">=100",
     "follower_verified": false,
     "follower_verified_at": "",
@@ -28972,7 +28980,7 @@
     "source_url": "https://api.github.com/search/users?q=roblox+in%3Abio&per_page=30",
     "contact_route": "先看主页和作品，再通过平台公开入口联系",
     "captured_at": "2026-11-13T01:55:32+00:00",
-    "followers": 43,
+    "followers": 44,
     "follower_tier": "<100",
     "follower_verified": false,
     "follower_verified_at": "",
@@ -29631,7 +29639,7 @@
     "source_url": "https://api.github.com/search/users?q=steam+in%3Abio&per_page=30",
     "contact_route": "先看主页和作品，再通过平台公开入口联系",
     "captured_at": "2026-11-13T01:55:53+00:00",
-    "followers": 190,
+    "followers": 191,
     "follower_tier": ">=100",
     "follower_verified": false,
     "follower_verified_at": "",
