@@ -7545,7 +7545,7 @@
     "source_url": "https://api.github.com/search/users?q=3d+ai+in%3Abio&per_page=30",
     "contact_route": "先看主页和作品，再通过平台公开入口联系",
     "captured_at": "2026-11-11T04:04:59+00:00",
-    "followers": 519,
+    "followers": 520,
     "follower_tier": ">=500",
     "follower_verified": false,
     "follower_verified_at": "",
@@ -12172,16 +12172,17 @@
     "follower_verified": false,
     "follower_verified_at": "",
     "follower_source": "",
-    "related_posts": 35,
+    "related_posts": 36,
     "min_views": null,
     "activity_score": 40,
-    "activity_feedback": "相关内容 35 条；播放/浏览量待核验",
+    "activity_feedback": "相关内容 36 条；播放/浏览量待核验",
     "featured_work_urls": [
       "https://github.com/AikoAii/Nuroneko",
       "https://github.com/AikoAii/horizon",
       "https://github.com/AikoAii/kzvolume",
       "https://github.com/AikoAii/lightcraft",
-      "https://github.com/AikoAii/NekoCurX"
+      "https://github.com/AikoAii/NekoCurX",
+      "https://github.com/AikoAii/cinnabar"
     ],
     "contact_links": [],
     "topics": [
@@ -12344,7 +12345,7 @@
     "source_url": "https://api.github.com/search/users?q=ai+game+in%3Abio&per_page=30",
     "contact_route": "先看主页和作品，再通过平台公开入口联系",
     "captured_at": "2026-11-11T04:05:28+00:00",
-    "followers": 297,
+    "followers": 298,
     "follower_tier": ">=100",
     "follower_verified": false,
     "follower_verified_at": "",
@@ -12580,7 +12581,7 @@
     "source_url": "https://api.github.com/search/users?q=ai+game+in%3Abio&per_page=30",
     "contact_route": "先看主页和作品，再通过平台公开入口联系",
     "captured_at": "2026-11-11T04:05:32+00:00",
-    "followers": 393,
+    "followers": 394,
     "follower_tier": ">=300",
     "follower_verified": false,
     "follower_verified_at": "",
@@ -12756,16 +12757,17 @@
     "follower_verified": false,
     "follower_verified_at": "",
     "follower_source": "",
-    "related_posts": 69,
+    "related_posts": 70,
     "min_views": null,
     "activity_score": 40,
-    "activity_feedback": "相关内容 69 条；播放/浏览量待核验",
+    "activity_feedback": "相关内容 70 条；播放/浏览量待核验",
     "featured_work_urls": [
       "https://github.com/gamedevCloudy/personal-blog",
       "https://github.com/gamedevCloudy/gamedevCloudy",
       "https://github.com/gamedevCloudy/homebrew-tools",
       "https://github.com/gamedevCloudy/nanodraw",
-      "https://github.com/gamedevCloudy/rustcast"
+      "https://github.com/gamedevCloudy/rustcast",
+      "https://github.com/gamedevCloudy/nanolight"
     ],
     "contact_links": [
       "aayushdev.xyz"
@@ -12814,16 +12816,17 @@
     "follower_verified": false,
     "follower_verified_at": "",
     "follower_source": "",
-    "related_posts": 27,
+    "related_posts": 28,
     "min_views": null,
     "activity_score": 40,
-    "activity_feedback": "相关内容 27 条；播放/浏览量待核验",
+    "activity_feedback": "相关内容 28 条；播放/浏览量待核验",
     "featured_work_urls": [
       "https://github.com/gamehack/mp-publisher",
       "https://github.com/gamehack/zhuozhengyuan",
       "https://github.com/gamehack/producthunt",
       "https://github.com/gamehack/moyushan",
-      "https://github.com/gamehack/cloud-cat-island"
+      "https://github.com/gamehack/cloud-cat-island",
+      "https://github.com/gamehack/codex-quota-monitor"
     ],
     "contact_links": [],
     "topics": [
@@ -13035,7 +13038,7 @@
     "source_url": "https://api.github.com/search/users?q=ai+game+in%3Abio&per_page=30",
     "contact_route": "先看主页和作品，再通过平台公开入口联系",
     "captured_at": "2026-11-13T01:55:21+00:00",
-    "followers": 464,
+    "followers": 465,
     "follower_tier": ">=300",
     "follower_verified": false,
     "follower_verified_at": "",
@@ -17912,7 +17915,7 @@
     "source_url": "https://api.github.com/search/users?q=ai+in%3Abio&per_page=30",
     "contact_route": "先看主页和作品，再通过平台公开入口联系",
     "captured_at": "2026-11-09T02:44:12+00:00",
-    "followers": 1606,
+    "followers": 1607,
     "follower_tier": ">=1,000",
     "follower_verified": false,
     "follower_verified_at": "",
@@ -22994,7 +22997,7 @@
     "source_url": "https://api.github.com/search/users?q=game+in%3Abio&per_page=30",
     "contact_route": "先看主页和作品，再通过平台公开入口联系",
     "captured_at": "2026-11-13T01:54:57+00:00",
-    "followers": 279,
+    "followers": 280,
     "follower_tier": ">=100",
     "follower_verified": false,
     "follower_verified_at": "",
@@ -23167,10 +23170,10 @@
     "follower_verified": false,
     "follower_verified_at": "",
     "follower_source": "",
-    "related_posts": 15224,
+    "related_posts": 15231,
     "min_views": null,
     "activity_score": 40,
-    "activity_feedback": "相关内容 15224 条；播放/浏览量待核验",
+    "activity_feedback": "相关内容 15231 条；播放/浏览量待核验",
     "featured_work_urls": [
       "https://github.com/Hengle/Eglantine",
       "https://github.com/Hengle/Fyrox",
@@ -28710,17 +28713,18 @@
     "follower_verified": false,
     "follower_verified_at": "",
     "follower_source": "",
-    "related_posts": 87,
+    "related_posts": 88,
     "min_views": null,
     "activity_score": 40,
-    "activity_feedback": "相关内容 87 条；播放/浏览量待核验",
+    "activity_feedback": "相关内容 88 条；播放/浏览量待核验",
     "featured_work_urls": [
       "https://github.com/Nicell/loooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo.ng",
       "https://github.com/Nicell/Dissatisfaction-65",
       "https://github.com/Nicell/disk-inventory-z",
       "https://github.com/Nicell/nice60",
       "https://github.com/Nicell/alien-signals-luau",
-      "https://github.com/Nicell/lynx"
+      "https://github.com/Nicell/lynx",
+      "https://github.com/Nicell/nrf54lm20-uf2-bootloader"
     ],
     "contact_links": [
       "https://nick.winans.io"
