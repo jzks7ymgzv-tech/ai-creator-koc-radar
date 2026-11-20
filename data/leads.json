@@ -7091,16 +7091,17 @@
     "follower_verified": false,
     "follower_verified_at": "",
     "follower_source": "",
-    "related_posts": 402,
+    "related_posts": 403,
     "min_views": null,
     "activity_score": 40,
-    "activity_feedback": "相关内容 402 条；播放/浏览量待核验",
+    "activity_feedback": "相关内容 403 条；播放/浏览量待核验",
     "featured_work_urls": [
       "https://github.com/freekrai/pglite",
       "https://github.com/freekrai/freekrai",
       "https://github.com/freekrai/getbutters-sdk",
       "https://github.com/freekrai/getbutters-cli",
-      "https://github.com/freekrai/remix-docs"
+      "https://github.com/freekrai/remix-docs",
+      "https://github.com/freekrai/rser.me"
     ],
     "contact_links": [
       "https://rogerstringer.com"
@@ -7201,7 +7202,7 @@
     "source_url": "https://api.github.com/search/users?q=3d+ai+in%3Abio&per_page=30",
     "contact_route": "先看主页和作品，再通过平台公开入口联系",
     "captured_at": "2026-11-11T04:05:08+00:00",
-    "followers": 485,
+    "followers": 486,
     "follower_tier": ">=300",
     "follower_verified": false,
     "follower_verified_at": "",
@@ -11873,7 +11874,7 @@
     "source_url": "https://api.github.com/search/users?q=ai+game+in%3Abio&per_page=30",
     "contact_route": "先看主页和作品，再通过平台公开入口联系",
     "captured_at": "2026-11-11T04:05:31+00:00",
-    "followers": 2725,
+    "followers": 2726,
     "follower_tier": ">=1,000",
     "follower_verified": false,
     "follower_verified_at": "",
@@ -11947,7 +11948,8 @@
       "https://github.com/adrianogil/MathPlayground",
       "https://github.com/adrianogil/glslshaders",
       "https://github.com/adrianogil/config-files",
-      "https://github.com/adrianogil/git-tools"
+      "https://github.com/adrianogil/git-tools",
+      "https://github.com/adrianogil/awesome-android"
     ],
     "contact_links": [
       "http://adrianogil.github.io/"
@@ -12641,7 +12643,7 @@
     "source_url": "https://api.github.com/search/users?q=ai+game+in%3Abio&per_page=30",
     "contact_route": "先看主页和作品，再通过平台公开入口联系",
     "captured_at": "2026-11-11T04:05:38+00:00",
-    "followers": 326,
+    "followers": 327,
     "follower_tier": ">=300",
     "follower_verified": false,
     "follower_verified_at": "",
@@ -12768,7 +12770,8 @@
       "https://github.com/gamedevCloudy/homebrew-tools",
       "https://github.com/gamedevCloudy/nanodraw",
       "https://github.com/gamedevCloudy/rustcast",
-      "https://github.com/gamedevCloudy/nanolight"
+      "https://github.com/gamedevCloudy/nanolight",
+      "https://github.com/gamedevCloudy/jev-decision-trees"
     ],
     "contact_links": [
       "aayushdev.xyz"
@@ -18043,7 +18046,8 @@
       "https://github.com/aidenybai/tla-ts",
       "https://github.com/aidenybai/yaps",
       "https://github.com/aidenybai/pattycake",
-      "https://github.com/aidenybai/cnfast"
+      "https://github.com/aidenybai/cnfast",
+      "https://github.com/aidenybai/lucia"
     ],
     "contact_links": [
       "https://aidenybai.com"
@@ -23172,10 +23176,10 @@
     "follower_verified": false,
     "follower_verified_at": "",
     "follower_source": "",
-    "related_posts": 15232,
+    "related_posts": 15233,
     "min_views": null,
     "activity_score": 40,
-    "activity_feedback": "相关内容 15232 条；播放/浏览量待核验",
+    "activity_feedback": "相关内容 15233 条；播放/浏览量待核验",
     "featured_work_urls": [
       "https://github.com/Hengle/Eglantine",
       "https://github.com/Hengle/Fyrox",
@@ -25946,7 +25950,7 @@
     "source_url": "https://api.github.com/search/users?q=roblox+in%3Abio&per_page=30",
     "contact_route": "先看主页和作品，再通过平台公开入口联系",
     "captured_at": "2026-11-13T01:55:35+00:00",
-    "followers": 134,
+    "followers": 135,
     "follower_tier": ">=100",
     "follower_verified": false,
     "follower_verified_at": "",
@@ -26016,7 +26020,7 @@
       "ai",
       "steam"
     ],
-    "verification_status": "API 已确认，内容门槛需人工复核",
+    "verification_status": "待核验粉丝量",
     "data_quality": "公开 API",
     "last_post_at": "",
     "hicreator_verified": false,
@@ -28750,6 +28754,62 @@
   },
   {
     "platform": "GitHub",
+    "name": "Matthew Emery",
+    "handle": "@lstmemery",
+    "profile_url": "https://github.com/lstmemery",
+    "bio": "Senior data scientist at Roblox.；公开仓库 106 个",
+    "categories": [
+      "待确认方向"
+    ],
+    "score": 2,
+    "creator_type": "个人创作者",
+    "source_query": "roblox",
+    "source_url": "https://api.github.com/search/users?q=roblox+in%3Abio&per_page=30",
+    "contact_route": "先看主页和作品，再通过平台公开入口联系",
+    "captured_at": "2026-11-20T01:57:18+00:00",
+    "followers": 50,
+    "follower_tier": "<100",
+    "follower_verified": false,
+    "follower_verified_at": "",
+    "follower_source": "",
+    "related_posts": 106,
+    "min_views": null,
+    "activity_score": 40,
+    "activity_feedback": "公开仓库 106 个；最高仓库 Stars 1（GitHub 不公开播放量）",
+    "featured_work_urls": [
+      "https://github.com/lstmemery/skills",
+      "https://github.com/lstmemery/protoxide",
+      "https://github.com/lstmemery/vikunja-mcp",
+      "https://github.com/lstmemery/PipePipe",
+      "https://github.com/lstmemery/filmspotting-2019"
+    ],
+    "contact_links": [
+      "matthewemery.ca"
+    ],
+    "topics": [
+      "roblox"
+    ],
+    "verification_status": "API 已确认，内容门槛需人工复核",
+    "data_quality": "公开 API",
+    "last_post_at": "",
+    "hicreator_verified": false,
+    "hicreator_verified_at": "",
+    "hicreator_source": "",
+    "public_email": "",
+    "creator_location": "",
+    "hicreator_selected_posts": null,
+    "views_average": null,
+    "views_max": null,
+    "likes_average": null,
+    "reposts_average": null,
+    "engagement_rate": null,
+    "posts_30d": null,
+    "weekly_post_frequency": null,
+    "avg_post_interval_days": null,
+    "last_post_age": ""
+  },
+  {
+    "platform": "GitHub",
     "name": "Nick Winans",
     "handle": "@Nicell",
     "profile_url": "https://github.com/Nicell",
@@ -29095,7 +29155,7 @@
     "source_url": "https://api.github.com/search/users?q=roblox+in%3Abio&per_page=30",
     "contact_route": "先看主页和作品，再通过平台公开入口联系",
     "captured_at": "2026-11-13T01:55:31+00:00",
-    "followers": 103,
+    "followers": 104,
     "follower_tier": ">=100",
     "follower_verified": false,
     "follower_verified_at": "",
@@ -29970,7 +30030,7 @@
     "source_url": "https://api.github.com/search/users?q=roblox+in%3Abio&per_page=30",
     "contact_route": "先看主页和作品，再通过平台公开入口联系",
     "captured_at": "2026-11-13T01:55:33+00:00",
-    "followers": 119,
+    "followers": 120,
     "follower_tier": ">=100",
     "follower_verified": false,
     "follower_verified_at": "",
