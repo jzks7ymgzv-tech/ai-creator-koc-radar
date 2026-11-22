@@ -6686,7 +6686,7 @@
     "source_url": "https://api.github.com/search/users?q=ai+in%3Abio&per_page=30",
     "contact_route": "先看主页和作品，再通过平台公开入口联系",
     "captured_at": "2026-11-09T02:44:02+00:00",
-    "followers": 10195,
+    "followers": 10196,
     "follower_tier": ">=10,000",
     "follower_verified": false,
     "follower_verified_at": "",
@@ -7267,10 +7267,10 @@
     "follower_verified": false,
     "follower_verified_at": "",
     "follower_source": "",
-    "related_posts": 486,
+    "related_posts": 487,
     "min_views": null,
     "activity_score": 40,
-    "activity_feedback": "相关内容 486 条；播放/浏览量待核验",
+    "activity_feedback": "相关内容 487 条；播放/浏览量待核验",
     "featured_work_urls": [
       "https://github.com/jreuben11/llvm-ir-builder",
       "https://github.com/jreuben11/xla-serving",
@@ -7563,7 +7563,8 @@
       "https://github.com/neka-nat/cad3dify",
       "https://github.com/neka-nat/fullbody-pose-maker",
       "https://github.com/neka-nat/agent3dify",
-      "https://github.com/neka-nat/cupoch"
+      "https://github.com/neka-nat/cupoch",
+      "https://github.com/neka-nat/web-sam"
     ],
     "contact_links": [
       "https://x.com/neka_nat"
@@ -8855,7 +8856,7 @@
     "source_url": "https://api.github.com/search/users?q=game+in%3Abio&per_page=30",
     "contact_route": "先看主页和作品，再通过平台公开入口联系",
     "captured_at": "2026-11-13T01:54:53+00:00",
-    "followers": 49,
+    "followers": 50,
     "follower_tier": "<100",
     "follower_verified": false,
     "follower_verified_at": "",
@@ -11875,7 +11876,7 @@
     "source_url": "https://api.github.com/search/users?q=ai+game+in%3Abio&per_page=30",
     "contact_route": "先看主页和作品，再通过平台公开入口联系",
     "captured_at": "2026-11-11T04:05:31+00:00",
-    "followers": 2727,
+    "followers": 2728,
     "follower_tier": ">=1,000",
     "follower_verified": false,
     "follower_verified_at": "",
@@ -12649,16 +12650,17 @@
     "follower_verified": false,
     "follower_verified_at": "",
     "follower_source": "",
-    "related_posts": 71,
+    "related_posts": 72,
     "min_views": null,
     "activity_score": 40,
-    "activity_feedback": "相关内容 71 条；播放/浏览量待核验",
+    "activity_feedback": "相关内容 72 条；播放/浏览量待核验",
     "featured_work_urls": [
       "https://github.com/CharlyKeleb/SocialMedia-App",
       "https://github.com/CharlyKeleb/TravelersSociaApp-UiKit",
       "https://github.com/CharlyKeleb/Animations",
       "https://github.com/CharlyKeleb/FlutterBookApp",
-      "https://github.com/CharlyKeleb/PlacesToPostYourStartup"
+      "https://github.com/CharlyKeleb/PlacesToPostYourStartup",
+      "https://github.com/CharlyKeleb/racing-game"
     ],
     "contact_links": [],
     "topics": [
@@ -12821,10 +12823,10 @@
     "follower_verified": false,
     "follower_verified_at": "",
     "follower_source": "",
-    "related_posts": 31,
+    "related_posts": 32,
     "min_views": null,
     "activity_score": 40,
-    "activity_feedback": "相关内容 31 条；播放/浏览量待核验",
+    "activity_feedback": "相关内容 32 条；播放/浏览量待核验",
     "featured_work_urls": [
       "https://github.com/gamehack/mp-publisher",
       "https://github.com/gamehack/zhuozhengyuan",
@@ -18092,7 +18094,7 @@
     "source_url": "https://api.github.com/search/users?q=ai+in%3Abio&per_page=30",
     "contact_route": "先看主页和作品，再通过平台公开入口联系",
     "captured_at": "2026-11-09T02:44:12+00:00",
-    "followers": 1666,
+    "followers": 1667,
     "follower_tier": ">=1,000",
     "follower_verified": false,
     "follower_verified_at": "",
@@ -18277,7 +18279,8 @@
       "https://github.com/nnaemek2/Carze-Auto-Parts-Car-Accessories-Store-Shopify",
       "https://github.com/nnaemek2/Aimgen.ai-AI-Image-Generator-Website",
       "https://github.com/nnaemek2/Roofex-Roofing-WordPress-Theme",
-      "https://github.com/nnaemek2/Jonk-Resume-CV-Portfolio-Elementor-Template-Kit"
+      "https://github.com/nnaemek2/Jonk-Resume-CV-Portfolio-Elementor-Template-Kit",
+      "https://github.com/nnaemek2/Shefa-App-Landing-Page-HTML-Template"
     ],
     "contact_links": [
       "https://paulnnaemeka.co.uk"
@@ -22671,7 +22674,7 @@
     "source_url": "https://api.github.com/search/users?q=game+in%3Abio&per_page=30",
     "contact_route": "先看主页和作品，再通过平台公开入口联系",
     "captured_at": "2026-11-13T01:54:52+00:00",
-    "followers": 254,
+    "followers": 255,
     "follower_tier": ">=100",
     "follower_verified": false,
     "follower_verified_at": "",
@@ -26005,7 +26008,7 @@
     "source_url": "https://api.github.com/search/users?q=steam+in%3Abio&per_page=30",
     "contact_route": "先看主页和作品，再通过平台公开入口联系",
     "captured_at": "2026-11-19T02:03:39+00:00",
-    "followers": 249,
+    "followers": 250,
     "follower_tier": ">=100",
     "follower_verified": false,
     "follower_verified_at": "",
