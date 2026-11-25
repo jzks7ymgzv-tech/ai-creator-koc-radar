@@ -6686,7 +6686,7 @@
     "source_url": "https://api.github.com/search/users?q=ai+in%3Abio&per_page=30",
     "contact_route": "先看主页和作品，再通过平台公开入口联系",
     "captured_at": "2026-11-09T02:44:02+00:00",
-    "followers": 10197,
+    "followers": 10198,
     "follower_tier": ">=10,000",
     "follower_verified": false,
     "follower_verified_at": "",
@@ -6979,7 +6979,7 @@
     "related_posts": 43,
     "min_views": null,
     "activity_score": 40,
-    "activity_feedback": "公开仓库 43 个；最高仓库 Stars 401（GitHub 不公开播放量）",
+    "activity_feedback": "相关内容 43 条；播放/浏览量待核验",
     "featured_work_urls": [
       "https://github.com/Dene33/amazon-hidden-site-hunter",
       "https://github.com/Dene33/world-gpt",
@@ -6991,10 +6991,10 @@
       "https://www.linkedin.com/in/denis-cera-497872108/"
     ],
     "topics": [
-      "ai",
-      "3d ai"
+      "3d ai",
+      "ai"
     ],
-    "verification_status": "API 已确认，内容门槛需人工复核",
+    "verification_status": "待核验粉丝量",
     "data_quality": "公开 API",
     "last_post_at": "",
     "hicreator_verified": false,
@@ -7325,10 +7325,10 @@
     "follower_verified": false,
     "follower_verified_at": "",
     "follower_source": "",
-    "related_posts": 487,
+    "related_posts": 489,
     "min_views": null,
     "activity_score": 40,
-    "activity_feedback": "相关内容 487 条；播放/浏览量待核验",
+    "activity_feedback": "相关内容 489 条；播放/浏览量待核验",
     "featured_work_urls": [
       "https://github.com/jreuben11/llvm-ir-builder",
       "https://github.com/jreuben11/xla-serving",
@@ -7606,7 +7606,7 @@
     "source_url": "https://api.github.com/search/users?q=3d+ai+in%3Abio&per_page=30",
     "contact_route": "先看主页和作品，再通过平台公开入口联系",
     "captured_at": "2026-11-11T04:04:59+00:00",
-    "followers": 524,
+    "followers": 525,
     "follower_tier": ">=500",
     "follower_verified": false,
     "follower_verified_at": "",
@@ -12529,7 +12529,7 @@
     "source_url": "https://api.github.com/search/users?q=ai+game+in%3Abio&per_page=30",
     "contact_route": "先看主页和作品，再通过平台公开入口联系",
     "captured_at": "2026-11-11T04:05:26+00:00",
-    "followers": 355,
+    "followers": 356,
     "follower_tier": ">=300",
     "follower_verified": false,
     "follower_verified_at": "",
@@ -12647,7 +12647,7 @@
     "source_url": "https://api.github.com/search/users?q=ai+game+in%3Abio&per_page=30",
     "contact_route": "先看主页和作品，再通过平台公开入口联系",
     "captured_at": "2026-11-11T04:05:32+00:00",
-    "followers": 396,
+    "followers": 397,
     "follower_tier": ">=300",
     "follower_verified": false,
     "follower_verified_at": "",
@@ -13166,7 +13166,7 @@
     "source_url": "https://api.github.com/search/users?q=ai+game+in%3Abio&per_page=30",
     "contact_route": "先看主页和作品，再通过平台公开入口联系",
     "captured_at": "2026-11-13T01:55:22+00:00",
-    "followers": 183,
+    "followers": 184,
     "follower_tier": ">=100",
     "follower_verified": false,
     "follower_verified_at": "",
@@ -13180,7 +13180,8 @@
       "https://github.com/yangruihan/norsefire",
       "https://github.com/yangruihan/MouseClassServiceCallbackMeme",
       "https://github.com/yangruihan/ai-pose-gallery-zh",
-      "https://github.com/yangruihan/SoloMapling"
+      "https://github.com/yangruihan/SoloMapling",
+      "https://github.com/yangruihan/clisp"
     ],
     "contact_links": [],
     "topics": [
@@ -18155,7 +18156,7 @@
     "source_url": "https://api.github.com/search/users?q=ai+in%3Abio&per_page=30",
     "contact_route": "先看主页和作品，再通过平台公开入口联系",
     "captured_at": "2026-11-09T02:44:12+00:00",
-    "followers": 1667,
+    "followers": 1668,
     "follower_tier": ">=1,000",
     "follower_verified": false,
     "follower_verified_at": "",
@@ -22682,7 +22683,7 @@
     "source_url": "https://api.github.com/search/users?q=game+in%3Abio&per_page=30",
     "contact_route": "先看主页和作品，再通过平台公开入口联系",
     "captured_at": "2026-11-13T01:55:03+00:00",
-    "followers": 397,
+    "followers": 401,
     "follower_tier": ">=300",
     "follower_verified": false,
     "follower_verified_at": "",
@@ -22809,7 +22810,8 @@
       "https://github.com/gameknife/smdconv",
       "https://github.com/gameknife/LifeProgress",
       "https://github.com/gameknife/SlimRendererIn30mins",
-      "https://github.com/gameknife/renderdoc-everything"
+      "https://github.com/gameknife/renderdoc-everything",
+      "https://github.com/gameknife/gkEngine"
     ],
     "contact_links": [
       "http://gameknife.github.io"
@@ -23247,10 +23249,10 @@
     "follower_verified": false,
     "follower_verified_at": "",
     "follower_source": "",
-    "related_posts": 15248,
+    "related_posts": 15272,
     "min_views": null,
     "activity_score": 40,
-    "activity_feedback": "相关内容 15248 条；播放/浏览量待核验",
+    "activity_feedback": "相关内容 15272 条；播放/浏览量待核验",
     "featured_work_urls": [
       "https://github.com/Hengle/Eglantine",
       "https://github.com/Hengle/Fyrox",
@@ -23304,10 +23306,10 @@
     "follower_verified": false,
     "follower_verified_at": "",
     "follower_source": "",
-    "related_posts": 584,
+    "related_posts": 585,
     "min_views": null,
     "activity_score": 40,
-    "activity_feedback": "相关内容 584 条；播放/浏览量待核验",
+    "activity_feedback": "相关内容 585 条；播放/浏览量待核验",
     "featured_work_urls": [
       "https://github.com/MBHudson/lfm3-mega-demo",
       "https://github.com/MBHudson/system_prompts_leaks",
@@ -30160,7 +30162,7 @@
     "source_url": "https://api.github.com/search/users?q=roblox+in%3Abio&per_page=30",
     "contact_route": "先看主页和作品，再通过平台公开入口联系",
     "captured_at": "2026-11-13T01:55:36+00:00",
-    "followers": 120,
+    "followers": 121,
     "follower_tier": ">=100",
     "follower_verified": false,
     "follower_verified_at": "",
