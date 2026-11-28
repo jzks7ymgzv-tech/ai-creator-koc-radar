@@ -7609,7 +7609,7 @@
     "source_url": "https://api.github.com/search/users?q=3d+ai+in%3Abio&per_page=30",
     "contact_route": "先看主页和作品，再通过平台公开入口联系",
     "captured_at": "2026-11-11T04:04:59+00:00",
-    "followers": 525,
+    "followers": 526,
     "follower_tier": ">=500",
     "follower_verified": false,
     "follower_verified_at": "",
@@ -12888,10 +12888,10 @@
     "follower_verified": false,
     "follower_verified_at": "",
     "follower_source": "",
-    "related_posts": 35,
+    "related_posts": 37,
     "min_views": null,
     "activity_score": 40,
-    "activity_feedback": "相关内容 35 条；播放/浏览量待核验",
+    "activity_feedback": "相关内容 37 条；播放/浏览量待核验",
     "featured_work_urls": [
       "https://github.com/gamehack/mp-publisher",
       "https://github.com/gamehack/zhuozhengyuan",
@@ -17995,16 +17995,17 @@
     "follower_verified": false,
     "follower_verified_at": "",
     "follower_source": "",
-    "related_posts": 268,
+    "related_posts": 269,
     "min_views": null,
     "activity_score": 40,
-    "activity_feedback": "相关内容 268 条；播放/浏览量待核验",
+    "activity_feedback": "相关内容 269 条；播放/浏览量待核验",
     "featured_work_urls": [
       "https://github.com/ai-hpc/ai-hardware-engineer-roadmap",
       "https://github.com/ai-hpc/awesome-ai-hardware",
       "https://github.com/ai-hpc/PrivacyProxy",
       "https://github.com/ai-hpc/IoT-For-Beginners",
-      "https://github.com/ai-hpc/gittensor"
+      "https://github.com/ai-hpc/gittensor",
+      "https://github.com/ai-hpc/WeightSpaceProgramming"
     ],
     "contact_links": [],
     "topics": [
@@ -22647,7 +22648,8 @@
       "https://github.com/dappcenter/Wappalyzer",
       "https://github.com/dappcenter/bsc-web3-connector",
       "https://github.com/dappcenter/merkle-distributor-1",
-      "https://github.com/dappcenter/create-react-app"
+      "https://github.com/dappcenter/create-react-app",
+      "https://github.com/dappcenter/Tronfomo1"
     ],
     "contact_links": [],
     "topics": [
@@ -22805,17 +22807,18 @@
     "follower_verified": false,
     "follower_verified_at": "",
     "follower_source": "",
-    "related_posts": 96,
+    "related_posts": 97,
     "min_views": null,
     "activity_score": 40,
-    "activity_feedback": "相关内容 96 条；播放/浏览量待核验",
+    "activity_feedback": "相关内容 97 条；播放/浏览量待核验",
     "featured_work_urls": [
       "https://github.com/gameknife/gkNextEngine",
       "https://github.com/gameknife/smdconv",
       "https://github.com/gameknife/LifeProgress",
       "https://github.com/gameknife/SlimRendererIn30mins",
       "https://github.com/gameknife/renderdoc-everything",
-      "https://github.com/gameknife/gkEngine"
+      "https://github.com/gameknife/gkEngine",
+      "https://github.com/gameknife/PersonalHealth"
     ],
     "contact_links": [
       "http://gameknife.github.io"
@@ -23253,10 +23256,10 @@
     "follower_verified": false,
     "follower_verified_at": "",
     "follower_source": "",
-    "related_posts": 15287,
+    "related_posts": 15292,
     "min_views": null,
     "activity_score": 40,
-    "activity_feedback": "相关内容 15287 条；播放/浏览量待核验",
+    "activity_feedback": "相关内容 15292 条；播放/浏览量待核验",
     "featured_work_urls": [
       "https://github.com/Hengle/Eglantine",
       "https://github.com/Hengle/Fyrox",
